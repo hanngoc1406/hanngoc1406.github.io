@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on My New Hugo Site</title>
-    <link>https://ducpa.id.vn/posts/</link>
-    <description>Recent content in Posts on My New Hugo Site</description>
+    <title>Posts on Hi, Im Phan Anh Duc 👋</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Hi, Im Phan Anh Duc 👋</description>
     <generator>Hugo -- 0.125.4</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 28 Apr 2024 17:33:42 +0700</lastBuildDate>
-    <atom:link href="https://ducpa.id.vn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Đây là trang blog đầu tiên</title>
-      <link>https://ducpa.id.vn/posts/helloworld/</link>
+      <link>http://localhost:1313/posts/helloworld/</link>
       <pubDate>Sun, 28 Apr 2024 17:33:42 +0700</pubDate>
-      <guid>https://ducpa.id.vn/posts/helloworld/</guid>
+      <guid>http://localhost:1313/posts/helloworld/</guid>
       <description>Đây là tiêu đề to vc Đây là list danh sách </description>
     </item>
   </channel>
