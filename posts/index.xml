@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on Hi, Im Phan Anh Duc 👋</title>
+    <title>Posts on Hi, I&#39;m Phan Anh Duc 👋</title>
     <link>https://ducpa.id.vn/posts/</link>
-    <description>Recent content in Posts on Hi, Im Phan Anh Duc 👋</description>
+    <description>Recent content in Posts on Hi, I&#39;m Phan Anh Duc 👋</description>
     <generator>Hugo -- 0.125.4</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 29 Apr 2024 15:17:30 +0700</lastBuildDate>
     <atom:link href="https://ducpa.id.vn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup Flutter SDK MacOS</title>
+      <link>https://ducpa.id.vn/posts/setup_flutter_macos/</link>
+      <pubDate>Mon, 29 Apr 2024 15:17:30 +0700</pubDate>
+      <guid>https://ducpa.id.vn/posts/setup_flutter_macos/</guid>
+      <description>1. Cài đặt môi trường cho macOS
+Bước 1: Truy cập Flutter documentation chọn tab Download and install để tải Flutter SDK tương ứng và giải nén vào thư mục bất kì
+Bước 2: Cập nhật system cho flutter
+Chạy lệnh sau để edit /.zshrc nano $HOME/.zshrc Thêm dòng dưới và sau đó ấn tổ hợp phím Ctrl + O và Ctrl + X để thoát export PATH=$HOME/path/to/flutter/bin:$PATH reload lại source .</description>
+    </item>
     <item>
       <title>Tạo project mới chỉ sử dụng file xib (Updated to Xcode 15)</title>
       <link>https://ducpa.id.vn/posts/project_with_xib_only/</link>
