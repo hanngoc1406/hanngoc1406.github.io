@@ -5,11 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Categories | Hi, Im Phan Anh Duc 👋</title>
+<title>Tạo project mới chỉ sử dụng file xib (Updated to Xcode 15) | Hi, Im Phan Anh Duc 👋</title>
 <meta name="keywords" content="">
-<meta name="description" content="">
+<meta name="description" content="Bước 1: Xóa các config và file không cần thiết
+Xóa Main storyboard file base name và Window Application Session Role trong info.plist &gt; Application Scence Manifest &gt; Scene Configuration Xóa bỏ các file không cần thiết Bước 2: Tạo UIViewController mới
+Bước 3: Chỉnh sửa file App Delegate
+Khai báo biến windows var window:UIWindow? Thêm UIViewController mới vào didFinishLaunchingWithOptions window = UIWindow(frame: UIScreen.main.bounds) guard let window = window else { print(&#34;Unexpected result when app&#39;s main window is nill&#34;) return false } window.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/categories/">
+<link rel="canonical" href="http://localhost:1313/posts/project_with_xib_only/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
@@ -18,8 +21,7 @@
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/categories/index.xml">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/categories/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/project_with_xib_only/">
 <noscript>
     <style>
         #theme-toggle,
@@ -59,7 +61,7 @@
 </noscript>
 </head>
 
-<body class="list" id="top">
+<body class="" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -108,15 +110,60 @@
     </nav>
 </header>
 <main class="main">
-<header class="page-header">
-    <h1>Categories</h1>
-</header>
 
-<ul class="terms-tags">
-    <li>
-        <a href="http://localhost:1313/categories/ios-development/">iOS Development <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Tạo project mới chỉ sử dụng file xib (Updated to Xcode 15)
+    </h1>
+    <div class="post-meta"><span title='2024-04-29 15:17:30 +0700 +07'>April 29, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p><strong>Bước 1:</strong> Xóa các config và file không cần thiết</p>
+<ul>
+<li>Xóa Main storyboard file base name và <strong>Window Application Session Role</strong> trong <code>info.plist &gt; Application Scence Manifest &gt; Scene Configuration</code></li>
 </ul>
+<p><img loading="lazy" src="./images/config_xib_1.png#center" alt="Xóa các config và file không cần thiết"  />
+</p>
+<ul>
+<li>Xóa bỏ các file không cần thiết</li>
+</ul>
+<p><img loading="lazy" src="./images/config_xib_2.png#center" alt="Xóa các config và file không cần thiết"  />
+</p>
+<p><strong>Bước 2:</strong> Tạo <strong>UIViewController</strong> mới</p>
+<p><img loading="lazy" src="./images/config_xib_3.png#center" alt="Tạo UIViewController mới"  />
+</p>
+<p><strong>Bước 3:</strong> Chỉnh sửa file <strong>App Delegate</strong></p>
+<ul>
+<li>Khai báo biến <code>windows</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Swift" data-lang="Swift"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> window:UIWindow?
+</span></span></code></pre></div><ul>
+<li>Thêm UIViewController mới vào <code>didFinishLaunchingWithOptions</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Swift" data-lang="Swift"><span style="display:flex;"><span>window = UIWindow(frame: UIScreen.main.bounds)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">guard</span> <span style="color:#66d9ef">let</span> window = window <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>	print(<span style="color:#e6db74">&#34;Unexpected result when app&#39;s main window is nill&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>window.rootViewController = HomeViewController() <span style="color:#75715e">// Doi thanh viewcontroller cua ban</span>
+</span></span><span style="display:flex;"><span>window.makeKeyAndVisible()
+</span></span></code></pre></div><ul>
+<li>Hoàn thiện</li>
+</ul>
+<p><img loading="lazy" src="./images/config_xib_4.png#center" alt="Hoàn thiện"  />
+</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
     </main>
     
 <footer class="footer">

@@ -99,6 +99,11 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/categories/ios-development/" title="iOS Development">
+                    <span>iOS Development</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -111,14 +116,17 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Đây là trang blog đầu tiên
+    <h2 class="entry-hint-parent">Tạo project mới chỉ sử dụng file xib (Updated to Xcode 15)
     </h2>
   </header>
   <div class="entry-content">
-    <p>Đây là tiêu đề to vc Đây là list danh sách </p>
+    <p>Bước 1: Xóa các config và file không cần thiết
+Xóa Main storyboard file base name và Window Application Session Role trong info.plist &gt; Application Scence Manifest &gt; Scene Configuration Xóa bỏ các file không cần thiết Bước 2: Tạo UIViewController mới
+Bước 3: Chỉnh sửa file App Delegate
+Khai báo biến windows var window:UIWindow? Thêm UIViewController mới vào didFinishLaunchingWithOptions window = UIWindow(frame: UIScreen.main.bounds) guard let window = window else { print(&#34;Unexpected result when app&#39;s main window is nill&#34;) return false } window....</p>
   </div>
-  <footer class="entry-footer"><span title='2024-04-28 17:33:42 +0700 +07'>April 28, 2024</span></footer>
-  <a class="entry-link" aria-label="post link to Đây là trang blog đầu tiên" href="http://localhost:1313/posts/helloworld/"></a>
+  <footer class="entry-footer"><span title='2024-04-29 15:17:30 +0700 +07'>April 29, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Tạo project mới chỉ sử dụng file xib (Updated to Xcode 15)" href="http://localhost:1313/posts/project_with_xib_only/"></a>
 </article>
     </main>
     
