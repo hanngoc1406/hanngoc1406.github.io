@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Biến và kiểu dữ liệu trong Dart | Hi, I&#39;m Phan Anh Duc 👋</title>
+<meta name="keywords" content="">
+<meta name="description" content="Variables (Biến) và Constant (Hằng số) var: Để khai báo một biến Const: Để khai báo hằng số và giá trị sẽ không thay đổi final: Về cơ bản là giống const nhưng sẽ khởi tạo một lần tức là giá trị của final sẽ không được xác định cho khi chương trình thực thi và sau đó không thay đổi nữa. final khá giống với let trong swift. static dùng để khai báo biến lớp và phương thức.">
+<meta name="author" content="">
+<link rel="canonical" href="https://ducpa.id.vn/posts/dart_datatypes/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ducpa.id.vn/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ducpa.id.vn/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ducpa.id.vn/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ducpa.id.vn/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ducpa.id.vn/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ducpa.id.vn/posts/dart_datatypes/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:title" content="Biến và kiểu dữ liệu trong Dart" />
+<meta property="og:description" content="Variables (Biến) và Constant (Hằng số) var: Để khai báo một biến Const: Để khai báo hằng số và giá trị sẽ không thay đổi final: Về cơ bản là giống const nhưng sẽ khởi tạo một lần tức là giá trị của final sẽ không được xác định cho khi chương trình thực thi và sau đó không thay đổi nữa. final khá giống với let trong swift. static dùng để khai báo biến lớp và phương thức." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ducpa.id.vn/posts/dart_datatypes/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-04-30T15:34:10+07:00" />
+<meta property="article:modified_time" content="2024-04-30T15:34:10+07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Biến và kiểu dữ liệu trong Dart"/>
+<meta name="twitter:description" content="Variables (Biến) và Constant (Hằng số) var: Để khai báo một biến Const: Để khai báo hằng số và giá trị sẽ không thay đổi final: Về cơ bản là giống const nhưng sẽ khởi tạo một lần tức là giá trị của final sẽ không được xác định cho khi chương trình thực thi và sau đó không thay đổi nữa. final khá giống với let trong swift. static dùng để khai báo biến lớp và phương thức."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://ducpa.id.vn/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Biến và kiểu dữ liệu trong Dart",
+      "item": "https://ducpa.id.vn/posts/dart_datatypes/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Biến và kiểu dữ liệu trong Dart",
+  "name": "Biến và kiểu dữ liệu trong Dart",
+  "description": "Variables (Biến) và Constant (Hằng số) var: Để khai báo một biến Const: Để khai báo hằng số và giá trị sẽ không thay đổi final: Về cơ bản là giống const nhưng sẽ khởi tạo một lần tức là giá trị của final sẽ không được xác định cho khi chương trình thực thi và sau đó không thay đổi nữa. final khá giống với let trong swift. static dùng để khai báo biến lớp và phương thức.",
+  "keywords": [
+    
+  ],
+  "articleBody": "Variables (Biến) và Constant (Hằng số) var: Để khai báo một biến Const: Để khai báo hằng số và giá trị sẽ không thay đổi final: Về cơ bản là giống const nhưng sẽ khởi tạo một lần tức là giá trị của final sẽ không được xác định cho khi chương trình thực thi và sau đó không thay đổi nữa. final khá giống với let trong swift. static dùng để khai báo biến lớp và phương thức. Nó thường quản lý bộ nhớ cho biến dữ liệu toàn cục vì vậy nếu chúng ta khai báo static thì có thể truy cập nó mà không cần tạo một đối tượng. Đối tượng lớp không bắt buộc phải truy cập vào phương thức hoặc biến static, chúng ta có thể truy cập nó bằng cách đặt tên lớp trước biến hoặc phương thức tĩnh. Sử dụng tên lớp, chúng ta có thể gọi phương thức của lớp từ các lớp khác. void main() { var age = 18; const PI = 3.14; const myName = \"Duc\"; final hoursSinceMidnight = DateTime.now().hour; } Các kiểu dữ liệu trong Dart 1. String Kiểu dữ liệu String sử dụng để biểu diễn chuỗi ký tự Unicode(UTF-16) (bạn có thể sử dụng các xâu có kí tự tiếng Việt hoặc bất cứ thứ tiếng nào mà sử dụng được với mã Unicode). void main(List\u003cString\u003e args) { // Dùng nháy đơn hay kép đều được var s1 = 'Single quotes work well for string literals.'; var s2 = \"Double quotes work just as well.\"; var s3 = 'It\\'s easy to escape the string delimiter.'; var s4 = \"It's even easier to use the other delimiter.\"; } Một số phương thức cơ bản void main(List\u003cString\u003e args) { /// Có thể sử dụng nháy đơn '' hoặc nháy kép \"\" để khai báo 1 string String s = 'Hello world '; String s1 = \"Hello world\"; /// Tách kí tự trong 1 chuỗi List\u003cString\u003e splittedStrs = s.split(\" \"); print(\"splittedStrs -\u003e $splittedStrs\"); // sẽ in ra: splittedStrs -\u003e [Hello,world] /// kiểm tra 1 string có chứa 1 string khác không bool hasWorldStr = s.contains(\"world\"); print(\"hasWorldStr -\u003e $hasWorldStr\"); // sẽ in ra: hasWorldStr -\u003e true /// chuyển đổi tất cả kí tự về kí tự viết hoa, viết thường String sUpperCase = s.toUpperCase(); String sLowerCase = s.toLowerCase(); print(\"sUpperCase -\u003e $sUpperCase\"); // sẽ in ra: sUpperCase -\u003e HELLO WORLD print(\"sLowerCase -\u003e $sLowerCase\"); // sẽ in ra: sLowerCase -\u003e hello world /// lấy vị trí đầu tiên của kí tự 'o' int sIndexOf = s.indexOf(\"o\"); print(\"sIndexOf -\u003e $sIndexOf\"); // sẽ in ra: sIndexOf -\u003e 4 /// kiểm tra xem string bắt đầu với kí tự 'H' bool sStartWith = s.startsWith(\"H\"); print(\"sStartWith -\u003e $sStartWith\"); // sẽ in ra: sStartWith -\u003e true /// thay thế các kí tự trong 1 chuỗi String sReplaced = s.replaceAll(\"world\", \"everyone\"); print(\"sReplaced -\u003e $sReplaced\"); // sẽ in ra: sReplaced -\u003e Hello everyone /// loại bỏ khoảng trắng ở đầu/cuối string String sTrimmed = s.trim(); print(\"s -\u003e \\\"$s\\\"\"); // sẽ in ra: s -\u003e \"Hello world \" print(\"sTrimmed -\u003e $sTrimmed\"); // sẽ in ra: sTrimmed -\u003e Hello world } 2. Number Int: Là kiểu số nguyên như bao nhiêu ngôn ngữ khác. Ngoài ra Dart có còn BigInt để làm việc với các kiểu số nguyên lớn Double: double là kiểu số thực. Các phiên bản cũ của Dart thì kiểu số thực bắt buộc phải có dấu . ví dụ để khai báo biến số thực a có giá trị 10 chúng ta phải viết rõ double a = 10.0 Tuy nhiên các phiên bản mới hiện nay đã bỏ phần dấu . này đi, bạn có thể khai báo double a = 10 void main(List\u003cString\u003e args) { /// int là kiểu dữ liệu lưu trữ số nguyên int a = 10; int b = -10; /// double là kiểu dữ liệu lưu trữ số thực /// có thể khai báo có hoặc không có dấu chấm double c = 10; double d = -10.0; print(\"a = $a\"); // sẽ in ra: a = 10 print(\"b = $b\"); // sẽ in ra: b = -10 print(\"c = $c\"); // sẽ in ra: c = 10.0 print(\"d = $d\"); // sẽ in ra: d = -10.0 } Một số phương thức cơ bản void numberMethod(int a, int b, double c, double d, String e) { //// Chuyển đổi từ int, double sang string String _aStr = a.toString(); String _bStr = b.toString(); print(\"int a toString: $_aStr\"); // sẽ in ra: int a toString: 10 print(\"double b toString: $_bStr\"); // sẽ in ra: double b toString: -10.0 /// Chuyển đổi từ string sang int, double int _cInt = int.parse(e); double _cDouble = double.parse(e); print(\"Parse String e to int: $_cInt\"); // sẽ in ra: Parse String c to int: 20 print(\"Parse String e to double: $_cDouble\"); // sẽ in ra: Parse String c to double: 20.0 /// Chuyển đổi từ int sang double /// Lưu ý: Khi chuyển đổi từ int sang double, phần thập phân sẽ là 0 double _aDouble = a.toDouble(); print(\"int a toDouble: $_aDouble\"); // sẽ in ra: int a toDouble: 10.0 /// Chuyển đổi từ double sang int /// Lưu ý: Khi chuyển đổi từ double sang int, phần thập phân sẽ bị bỏ đi int _bInt = c.toInt(); print(\"double c toInt: $_bInt\"); // sẽ in ra: double b toDouble: -10 } 3. Bool Kiểu dữ liệu bool trong Dart có 2 giá trị là true (đúng) và false (sai) được sử dụng để thể hiện kết quả của một mệnh đề logic (các phép toán so sánh, kiểm tra, các hàm…) void main() { /// bool là kiểu dữ liệu lưu trữ giá trị đúng/sai bool e = true; bool f = false; /// các viết tắt khi so sánh bool == true if (e) { print(\"e is $e\"); // sẽ in ra: e is true } /// viết đầy đủ khi so sánh bool == true if (e == true) { print(\"e == true\"); // sẽ in ra: e == true } /// so sánh bool == false if (!f) { print(\"f is $f\"); // sẽ in ra: f is false } /// so sánh nhiều mệnh đề if (e \u0026\u0026 !f) { print(\"f == true and f == false\"); // sẽ in ra: e == true and f == false } /// so sánh nhiều mệnh đề if (e || f) { print(\"e == true or f == true\"); // sẽ in ra: e == true and f == false } } 4. Array Kiểu dữ liệu array (List) trong Dart được sử dụng để biểu diễn cho một tập hợp các đối tượng theo một thứ tự nhất định. và List trong Dart tương tự như Array ở trong các ngôn ngữ khác. void main() { /// List là kiểu dữ liệu lưu trữ 1 mảng dữ liệu /// Khai báo List sử dụng [] List strs = [\"a\", \"b\", \"c\"]; print(\"strs -\u003e $strs\"); // sẽ in ra: strs -\u003e [a, b, c] /// Khai báo list sử dụng List[] List\u003cString\u003e strs_1 = \u003cString\u003e[\"a\", \"b\", \"c\"]; print(\"strs_1 -\u003e $strs_1\"); // sẽ in ra: strs_1 -\u003e [a, b, c] } Một số phương thức cơ bản void arrayMethod(List strs, List strs_1, List strs_2) { strs.add(\"d\"); print(\"strs after adding \\\"d\\\" -\u003e $strs\"); // sẽ in ra: strs after adding \"d\" -\u003e [a, b, c, d] strs.remove(\"d\"); print(\"strs after removing \\\"d\\\" -\u003e \" + strs.toString()); // sẽ in ra: strs_1 after adding \"d\" -\u003e [a, b, c, d] /// đoạn code trên, nhưng sử dụng [Builder Design Pattern] để viết code ngắn gọn hơn print(\"strs after adding \\\"d\\\" then remove \\\"d\\\" -\u003e ${strs..add(\"d\")..remove(\"d\")}\"); /// Sẽ in ra: strs after adding \"d\" then remove \"d\" -\u003e [a, b, c] /// Thêm 1 array vào 1 array có sẵn strs_1.addAll(strs_2); print(\"strs_1 after addAll str_2 -\u003e $strs_1\"); // strs_1 after addAll str_2 -\u003e [a, b, c, d, e, f] /// Tách phần tử từ một mảng sử dụng List.sublist(int start, int? end) /// Sẽ trả về sublist với điều kiện 0 \u003c= start \u003c= end \u003c= list.length /// Tách phần tử từ 1 đến 3 print(\"strs_1_subList -\u003e ${strs_1.sublist(2, 4)}\"); // sẽ in ra: strs_1_subList -\u003e [c, d] /// Lấy phần tử tại vị trí index trong mảng String strByIndex = strs_1[0]; print(\"strByIndex -\u003e $strByIndex\"); // _strByIndex -\u003e a /// Tìm kiếm phần tử trong mảng /// Sử dụng List.indexOf(Object element) để tìm kiếm phần tử trong mảng /// Sẽ trả về vị trí đầu tiên của phần tử trong mảng, nếu không tìm thấy sẽ trả về -1 /// Tìm vị trí của phần tử \"c\" trong mảng strs_1 print(\"strs_1 indexOf \\\"c\\\" -\u003e ${strs_1.indexOf(\"c\")}\"); // sẽ in ra: strs_1 indexOf \"c\" -\u003e 2 } 5. Map Kiểu dữ liệu map trong dart là một đối tượng lưu trữ dữ liệu dưới dạng một cặp khóa-giá trị (key - value). Mỗi giá trị được liên kết với khóa của nó và nó được sử dụng để truy cập giá trị tương ứng của nó. Cả khóa và giá trị đều có thể là bất kỳ loại nào void main() { /// cách viết ngắn gọn Map map = {\"key\": \"value\"}; print(\"map -\u003e $map\"); // sẽ in ra: map -\u003e {key: value} /// cách viết rõ nghĩa Map\u003cString, String\u003e map1 = Map\u003cString, String\u003e(); map1[\"key\"] = \"value\"; print(\"map1 -\u003e $map1\"); // sẽ in ra: map1 -\u003e {key: value} } Một số phương thức cơ bản void mapMethod(Map map1) { /// Map.from(Map) để tạo ra một Map mới từ một Map đã có Map\u003cString, String\u003e map2 = Map.from(map1); print(\"map2 -\u003e $map2\"); // sẽ in ra: map2 -\u003e {key: value} /// keys.first -\u003e lấy ra key đầu tiên của map String key = map1.keys.first; print(\"key from map1 -\u003e $key\"); // key from map1 -\u003e key /// values.first -\u003e lấy ra value đầu tiên của map String value = map1.values.first; print(\"value from map1 -\u003e $value\"); // value from map1 -\u003e value /// addAll(Map) để thêm tất cả các phần tử từ một Map khác vào Map hiện tại Map map12 = map1..addAll(map2); print(\"map12 -\u003e $map12\"); // sẽ in ra: map12 -\u003e {key: value} } Note\nTrong map key phải là duy nhất, nếu trùng thì giá trị mới sẽ ghi đè lên giá trị cũ\n6. Dynamic Dynamic đúng như cái tên của nó là kiểu dữ liệu động hay nói cách khác là chấp nhận mọi kiểu dữ liệu dynamic myVariable = 42; // Kiểu int myVariable = \"hello\"; // lúc này là kiểu string Hoặc có thể dùng var nhưng không khởi tạo giá trị thì lúc này kiểu dữ liệu mặc định sẽ là dynamic var myName; myName = \"Nick\"; // lúc này là kiểu string nyName = 42 // lúc này là kiểu int Nguồn tham khảo Bài viết được tham khảo từ tài liệu của đồng nghiệp Series và Dart và Flutter của fxstudio ",
+  "wordCount" : "1813",
+  "inLanguage": "en",
+  "datePublished": "2024-04-30T15:34:10+07:00",
+  "dateModified": "2024-04-30T15:34:10+07:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ducpa.id.vn/posts/dart_datatypes/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hi, I'm Phan Anh Duc 👋",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ducpa.id.vn/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ducpa.id.vn/" accesskey="h" title="Hi, I&#39;m Phan Anh Duc 👋 (Alt + H)">Hi, I&#39;m Phan Anh Duc 👋</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ducpa.id.vn/categories/dart-fundamentals/" title="Dart Fundamentals">
+                    <span>Dart Fundamentals</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ducpa.id.vn/categories/flutter/" title="Flutter">
+                    <span>Flutter</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ducpa.id.vn/categories/ios-development-notes/" title="iOS Development Notes">
+                    <span>iOS Development Notes</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://ducpa.id.vn/">Home</a>&nbsp;»&nbsp;<a href="https://ducpa.id.vn/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Biến và kiểu dữ liệu trong Dart
+    </h1>
+    <div class="post-meta"><span title='2024-04-30 15:34:10 +0700 +07'>April 30, 2024</span>&nbsp;·&nbsp;9 min
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="variables-biến-và-constant-hằng-số">Variables (Biến) và Constant (Hằng số)<a hidden class="anchor" aria-hidden="true" href="#variables-biến-và-constant-hằng-số">#</a></h2>
+<ul>
+<li><strong>var:</strong> Để khai báo một biến</li>
+<li><strong>Const:</strong> Để khai báo hằng số và giá trị sẽ không thay đổi</li>
+<li><strong>final:</strong> Về cơ bản là giống <code>const</code> nhưng sẽ khởi tạo một lần tức là giá trị của <code>final</code> sẽ không được xác định cho khi chương trình thực thi và sau đó không thay đổi nữa. <code>final</code> khá giống với <code>let</code> trong swift.</li>
+<li><strong>static</strong> dùng để khai báo biến lớp và phương thức. Nó thường quản lý bộ nhớ cho biến dữ liệu toàn cục vì vậy nếu chúng ta khai báo static thì có thể truy cập nó mà không cần tạo một đối tượng. Đối tượng lớp không bắt buộc phải truy cập vào phương thức hoặc biến static, chúng ta có thể truy cập nó bằng cách đặt tên lớp trước biến hoặc phương thức tĩnh. Sử dụng tên lớp, chúng ta có thể gọi phương thức của lớp từ các lớp khác.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dart" data-lang="Dart"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> main() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> age <span style="color:#f92672">=</span> <span style="color:#ae81ff">18</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> PI <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.14</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> myName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Duc&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">final</span> hoursSinceMidnight <span style="color:#f92672">=</span> DateTime.now().hour;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="các-kiểu-dữ-liệu-trong-dart">Các kiểu dữ liệu trong Dart<a hidden class="anchor" aria-hidden="true" href="#các-kiểu-dữ-liệu-trong-dart">#</a></h2>
+<h3 id="1-string">1. String<a hidden class="anchor" aria-hidden="true" href="#1-string">#</a></h3>
+<ul>
+<li>Kiểu dữ liệu String sử dụng để biểu diễn chuỗi ký tự Unicode(UTF-16) (bạn có thể sử dụng các xâu có kí tự tiếng Việt hoặc bất cứ thứ tiếng nào mà sử dụng được với mã Unicode).</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dart" data-lang="Dart"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> main(List<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">String</span><span style="color:#f92672">&gt;</span> args) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Dùng nháy đơn hay kép đều được
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Single quotes work well for string literals.&#39;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> s2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Double quotes work just as well.&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> s3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;It</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">s easy to escape the string delimiter.&#39;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> s4 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;It&#39;s even easier to use the other delimiter.&#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Một số phương thức cơ bản</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dart" data-lang="Dart"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> main(List<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">String</span><span style="color:#f92672">&gt;</span> args) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// Có thể sử dụng nháy đơn &#39;&#39; hoặc nháy kép &#34;&#34; để khai báo 1 string
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">String</span> s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Hello world &#39;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">String</span> s1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello world&#34;</span>;
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// Tách kí tự trong 1 chuỗi
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  List<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">String</span><span style="color:#f92672">&gt;</span> splittedStrs <span style="color:#f92672">=</span> s.split(<span style="color:#e6db74">&#34; &#34;</span>);
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;splittedStrs -&gt; </span><span style="color:#e6db74">$</span>splittedStrs<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: splittedStrs -&gt; [Hello,world]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// kiểm tra 1 string có chứa 1 string khác không
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">bool</span> hasWorldStr <span style="color:#f92672">=</span> s.contains(<span style="color:#e6db74">&#34;world&#34;</span>);
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;hasWorldStr -&gt; </span><span style="color:#e6db74">$</span>hasWorldStr<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: hasWorldStr -&gt; true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// chuyển đổi tất cả kí tự về kí tự viết hoa, viết thường
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">String</span> sUpperCase <span style="color:#f92672">=</span> s.toUpperCase();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">String</span> sLowerCase <span style="color:#f92672">=</span> s.toLowerCase();
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;sUpperCase -&gt; </span><span style="color:#e6db74">$</span>sUpperCase<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: sUpperCase -&gt; HELLO WORLD
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  print(<span style="color:#e6db74">&#34;sLowerCase -&gt; </span><span style="color:#e6db74">$</span>sLowerCase<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: sLowerCase -&gt; hello world
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// lấy vị trí đầu tiên của kí tự &#39;o&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> sIndexOf <span style="color:#f92672">=</span> s.indexOf(<span style="color:#e6db74">&#34;o&#34;</span>);
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;sIndexOf -&gt; </span><span style="color:#e6db74">$</span>sIndexOf<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: sIndexOf -&gt; 4
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// kiểm tra xem string bắt đầu với kí tự &#39;H&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">bool</span> sStartWith <span style="color:#f92672">=</span> s.startsWith(<span style="color:#e6db74">&#34;H&#34;</span>);
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;sStartWith -&gt; </span><span style="color:#e6db74">$</span>sStartWith<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: sStartWith -&gt; true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// thay thế các kí tự trong 1 chuỗi
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">String</span> sReplaced <span style="color:#f92672">=</span> s.replaceAll(<span style="color:#e6db74">&#34;world&#34;</span>, <span style="color:#e6db74">&#34;everyone&#34;</span>);
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;sReplaced -&gt; </span><span style="color:#e6db74">$</span>sReplaced<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: sReplaced -&gt; Hello everyone
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// loại bỏ khoảng trắng ở đầu/cuối string
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">String</span> sTrimmed <span style="color:#f92672">=</span> s.trim();
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;s -&gt; </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">$</span>s<span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: s -&gt; &#34;Hello world &#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  print(<span style="color:#e6db74">&#34;sTrimmed -&gt; </span><span style="color:#e6db74">$</span>sTrimmed<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: sTrimmed -&gt; Hello world
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><h3 id="2-number">2. Number<a hidden class="anchor" aria-hidden="true" href="#2-number">#</a></h3>
+<ul>
+<li><strong>Int:</strong> Là kiểu số nguyên như bao nhiêu ngôn ngữ khác. Ngoài ra Dart có còn BigInt để làm việc với các kiểu số nguyên lớn</li>
+<li><strong>Double:</strong> double là kiểu số thực. Các phiên bản cũ của Dart thì kiểu số thực bắt buộc phải có dấu <code>.</code> ví dụ để khai báo biến số thực a có giá trị 10 chúng ta phải viết rõ double a = 10.0 Tuy nhiên các phiên bản mới hiện nay đã bỏ phần dấu <code>.</code> này đi, bạn có thể khai báo double a = 10</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dart" data-lang="Dart"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> main(List<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">String</span><span style="color:#f92672">&gt;</span> args) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// int là kiểu dữ liệu lưu trữ số nguyên
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// double là kiểu dữ liệu lưu trữ số thực
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">/// có thể khai báo có hoặc không có dấu chấm
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">double</span> c <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">double</span> d <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">10.0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;a = </span><span style="color:#e6db74">$</span>a<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: a = 10
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  print(<span style="color:#e6db74">&#34;b = </span><span style="color:#e6db74">$</span>b<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: b = -10
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  print(<span style="color:#e6db74">&#34;c = </span><span style="color:#e6db74">$</span>c<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: c = 10.0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  print(<span style="color:#e6db74">&#34;d = </span><span style="color:#e6db74">$</span>d<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: d = -10.0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><ul>
+<li>Một số phương thức cơ bản</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dart" data-lang="Dart"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> numberMethod(<span style="color:#66d9ef">int</span> a, <span style="color:#66d9ef">int</span> b, <span style="color:#66d9ef">double</span> c, <span style="color:#66d9ef">double</span> d, <span style="color:#66d9ef">String</span> e) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//// Chuyển đổi từ int, double sang string
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">String</span> _aStr <span style="color:#f92672">=</span> a.toString();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">String</span> _bStr <span style="color:#f92672">=</span> b.toString();
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;int a toString: </span><span style="color:#e6db74">$</span>_aStr<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: int a toString: 10
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  print(<span style="color:#e6db74">&#34;double b toString: </span><span style="color:#e6db74">$</span>_bStr<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: double b toString: -10.0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// Chuyển đổi từ string sang int, double
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> _cInt <span style="color:#f92672">=</span> <span style="color:#66d9ef">int</span>.parse(e);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">double</span> _cDouble <span style="color:#f92672">=</span> <span style="color:#66d9ef">double</span>.parse(e);
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;Parse String e to int: </span><span style="color:#e6db74">$</span>_cInt<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: Parse String c to int: 20
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  print(<span style="color:#e6db74">&#34;Parse String e to double: </span><span style="color:#e6db74">$</span>_cDouble<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: Parse String c to double: 20.0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// Chuyển đổi từ int sang double
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">/// Lưu ý: Khi chuyển đổi từ int sang double, phần thập phân sẽ là 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">double</span> _aDouble <span style="color:#f92672">=</span> a.toDouble();
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;int a toDouble: </span><span style="color:#e6db74">$</span>_aDouble<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: int a toDouble: 10.0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// Chuyển đổi từ double sang int
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">/// Lưu ý: Khi chuyển đổi từ double sang int, phần thập phân sẽ bị bỏ đi
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> _bInt <span style="color:#f92672">=</span> c.toInt();
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;double c toInt: </span><span style="color:#e6db74">$</span>_bInt<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: double b toDouble: -10
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><h3 id="3-bool">3. Bool<a hidden class="anchor" aria-hidden="true" href="#3-bool">#</a></h3>
+<ul>
+<li>Kiểu dữ liệu bool trong Dart có 2 giá trị là true (đúng) và false (sai) được sử dụng để thể hiện kết quả của một mệnh đề logic (các phép toán so sánh, kiểm tra, các hàm&hellip;)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dart" data-lang="Dart"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> main() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// bool là kiểu dữ liệu lưu trữ giá trị đúng/sai
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">bool</span> e <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">bool</span> f <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// các viết tắt khi so sánh bool == true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (e) {
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;e is </span><span style="color:#e6db74">$</span>e<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: e is true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// viết đầy đủ khi so sánh bool == true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (e <span style="color:#f92672">==</span> <span style="color:#66d9ef">true</span>) {
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;e == true&#34;</span>); <span style="color:#75715e">// sẽ in ra: e == true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// so sánh bool == false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>f) {
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;f is </span><span style="color:#e6db74">$</span>f<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: f is false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// so sánh nhiều mệnh đề
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (e <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>f) {
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;f == true and f == false&#34;</span>); <span style="color:#75715e">// sẽ in ra: e == true and f == false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// so sánh nhiều mệnh đề
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (e <span style="color:#f92672">||</span> f) {
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;e == true or f == true&#34;</span>); <span style="color:#75715e">// sẽ in ra: e == true and f == false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="4-array">4. Array<a hidden class="anchor" aria-hidden="true" href="#4-array">#</a></h3>
+<ul>
+<li>Kiểu dữ liệu array (List) trong Dart được sử dụng để biểu diễn cho một tập hợp các đối tượng theo một thứ tự nhất định. và List trong Dart tương tự như Array ở trong các ngôn ngữ khác.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dart" data-lang="Dart"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> main() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// List là kiểu dữ liệu lưu trữ 1 mảng dữ liệu
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">/// Khai báo List sử dụng []
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  List strs <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#e6db74">&#34;b&#34;</span>, <span style="color:#e6db74">&#34;c&#34;</span>];
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;strs -&gt; </span><span style="color:#e6db74">$</span>strs<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: strs -&gt; [a, b, c]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// Khai báo list sử dụng List&lt;type&gt;[]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  List<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">String</span><span style="color:#f92672">&gt;</span> strs_1 <span style="color:#f92672">=</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">String</span><span style="color:#f92672">&gt;</span>[<span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#e6db74">&#34;b&#34;</span>, <span style="color:#e6db74">&#34;c&#34;</span>];
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;strs_1 -&gt; </span><span style="color:#e6db74">$</span>strs_1<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: strs_1 -&gt; [a, b, c]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><ul>
+<li>Một số phương thức cơ bản</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dart" data-lang="Dart"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> arrayMethod(List strs, List strs_1, List strs_2) {
+</span></span><span style="display:flex;"><span>  strs.add(<span style="color:#e6db74">&#34;d&#34;</span>);
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;strs after adding </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">d</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74"> -&gt; </span><span style="color:#e6db74">$</span>strs<span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// sẽ in ra: strs after adding &#34;d&#34; -&gt; [a, b, c, d]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  strs.remove(<span style="color:#e6db74">&#34;d&#34;</span>);
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;strs after removing </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">d</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74"> -&gt; &#34;</span> <span style="color:#f92672">+</span> strs.toString());  <span style="color:#75715e">// sẽ in ra: strs_1 after adding &#34;d&#34; -&gt; [a, b, c, d]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// đoạn code trên, nhưng sử dụng [Builder Design Pattern] để viết code ngắn gọn hơn
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  print(<span style="color:#e6db74">&#34;strs after adding </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">d</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74"> then remove </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">d</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74"> -&gt; </span><span style="color:#e6db74">${</span>strs..add(<span style="color:#e6db74">&#34;d&#34;</span>)..remove(<span style="color:#e6db74">&#34;d&#34;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">/// Sẽ in ra: strs after adding &#34;d&#34; then remove &#34;d&#34; -&gt; [a, b, c]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// Thêm 1 array vào 1 array có sẵn
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  strs_1.addAll(strs_2);
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;strs_1 after addAll str_2 -&gt; </span><span style="color:#e6db74">$</span>strs_1<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// strs_1 after addAll str_2 -&gt; [a, b, c, d, e, f]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// Tách phần tử từ một mảng sử dụng List.sublist(int start, int? end)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">/// Sẽ trả về sublist với điều kiện 0 &lt;= start &lt;= end &lt;= list.length
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">/// Tách phần tử từ 1 đến 3 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  print(<span style="color:#e6db74">&#34;strs_1_subList -&gt; </span><span style="color:#e6db74">${</span>strs_1.sublist(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: strs_1_subList -&gt; [c, d]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// Lấy phần tử tại vị trí index trong mảng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">String</span> strByIndex <span style="color:#f92672">=</span> strs_1[<span style="color:#ae81ff">0</span>];
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;strByIndex -&gt; </span><span style="color:#e6db74">$</span>strByIndex<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// _strByIndex -&gt; a
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// Tìm kiếm phần tử trong mảng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">/// Sử dụng List.indexOf(Object element) để tìm kiếm phần tử trong mảng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">/// Sẽ trả về vị trí đầu tiên của phần tử trong mảng, nếu không tìm thấy sẽ trả về -1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">/// Tìm vị trí của phần tử &#34;c&#34; trong mảng strs_1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  print(<span style="color:#e6db74">&#34;strs_1 indexOf </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">c</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74"> -&gt; </span><span style="color:#e6db74">${</span>strs_1.indexOf(<span style="color:#e6db74">&#34;c&#34;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: strs_1 indexOf &#34;c&#34; -&gt; 2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><h3 id="5-map">5. Map<a hidden class="anchor" aria-hidden="true" href="#5-map">#</a></h3>
+<ul>
+<li>Kiểu dữ liệu map trong dart là một đối tượng lưu trữ dữ liệu dưới dạng một cặp khóa-giá trị (key - value). Mỗi giá trị được liên kết với khóa của nó và nó được sử dụng để truy cập giá trị tương ứng của nó. Cả khóa và giá trị đều có thể là bất kỳ loại nào</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dart" data-lang="Dart"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> main() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// cách viết ngắn gọn
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  Map map <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;key&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;value&#34;</span>};
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;map -&gt; </span><span style="color:#e6db74">$</span>map<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: map -&gt; {key: value}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// cách viết rõ nghĩa
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  Map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">String</span>, <span style="color:#66d9ef">String</span><span style="color:#f92672">&gt;</span> map1 <span style="color:#f92672">=</span> Map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">String</span>, <span style="color:#66d9ef">String</span><span style="color:#f92672">&gt;</span>();
+</span></span><span style="display:flex;"><span>  map1[<span style="color:#e6db74">&#34;key&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;value&#34;</span>;
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;map1 -&gt; </span><span style="color:#e6db74">$</span>map1<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: map1 -&gt; {key: value}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><ul>
+<li>Một số phương thức cơ bản</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dart" data-lang="Dart"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> mapMethod(Map map1) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// Map.from(Map) để tạo ra một Map mới từ một Map đã có
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  Map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">String</span>, <span style="color:#66d9ef">String</span><span style="color:#f92672">&gt;</span> map2 <span style="color:#f92672">=</span> Map.from(map1);
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;map2 -&gt; </span><span style="color:#e6db74">$</span>map2<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: map2 -&gt; {key: value}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// keys.first -&gt; lấy ra key đầu tiên của map
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">String</span> key <span style="color:#f92672">=</span> map1.keys.first;
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;key from map1 -&gt; </span><span style="color:#e6db74">$</span>key<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// key from map1 -&gt; key
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// values.first -&gt; lấy ra value đầu tiên của map
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">String</span> value <span style="color:#f92672">=</span> map1.values.first;
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;value from map1 -&gt; </span><span style="color:#e6db74">$</span>value<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// value from map1 -&gt; value
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/// addAll(Map) để thêm tất cả các phần tử từ một Map khác vào Map hiện tại
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  Map map12 <span style="color:#f92672">=</span> map1..addAll(map2);
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;map12 -&gt; </span><span style="color:#e6db74">$</span>map12<span style="color:#e6db74">&#34;</span>); <span style="color:#75715e">// sẽ in ra: map12 -&gt; {key: value}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><style type="text/css">
+    .notice {
+        --root-color: #444;
+        --root-background: #eff;
+        --title-color: #fff;
+        --title-background: #7bd;
+        --warning-title: #c33;
+        --warning-content: #fee;
+        --info-title: #fb7;
+        --info-content: #fec;
+        --note-title: #6be;
+        --note-content: #e7f2fa;
+        --tip-title: #5a5;
+        --tip-content: #efe
+    }
+
+    @media (prefers-color-scheme:dark) {
+        .notice {
+            --root-color: #ddd;
+            --root-background: #eff;
+            --title-color: #fff;
+            --title-background: #7bd;
+            --warning-title: #800;
+            --warning-content: #400;
+            --info-title: #a50;
+            --info-content: #420;
+            --note-title: #069;
+            --note-content: #023;
+            --tip-title: #363;
+            --tip-content: #121
+        }
+    }
+
+    body.dark .notice {
+        --root-color: #ddd;
+        --root-background: #eff;
+        --title-color: #fff;
+        --title-background: #7bd;
+        --warning-title: #800;
+        --warning-content: #400;
+        --info-title: #a50;
+        --info-content: #420;
+        --note-title: #069;
+        --note-content: #023;
+        --tip-title: #363;
+        --tip-content: #121
+    }
+
+    .notice {
+        padding: 18px;
+        line-height: 24px;
+        margin-bottom: 24px;
+        border-radius: 4px;
+        color: var(--root-color);
+        background: var(--root-background)
+    }
+
+    .notice p:last-child {
+        margin-bottom: 0
+    }
+
+    .notice-title {
+        margin: -18px -18px 12px;
+        padding: 4px 18px;
+        border-radius: 4px 4px 0 0;
+        font-weight: 700;
+        color: var(--title-color);
+        background: var(--title-background)
+    }
+
+    .notice.warning .notice-title {
+        background: var(--warning-title)
+    }
+
+    .notice.warning {
+        background: var(--warning-content)
+    }
+
+    .notice.info .notice-title {
+        background: var(--info-title)
+    }
+
+    .notice.info {
+        background: var(--info-content)
+    }
+
+    .notice.note .notice-title {
+        background: var(--note-title)
+    }
+
+    .notice.note {
+        background: var(--note-content)
+    }
+
+    .notice.tip .notice-title {
+        background: var(--tip-title)
+    }
+
+    .notice.tip {
+        background: var(--tip-content)
+    }
+
+    .icon-notice {
+        display: inline-flex;
+        align-self: center;
+        margin-right: 8px
+    }
+
+    .icon-notice img,
+    .icon-notice svg {
+        height: 1em;
+        width: 1em;
+        fill: currentColor
+    }
+
+    .icon-notice img,
+    .icon-notice.baseline svg {
+        top: .125em;
+        position: relative
+    }
+</style><div class="notice note" >
+    <p class="notice-title">
+        <span class="icon-notice baseline">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 128 300 300">
+  <path d="M150 128c82.813 0 150 67.188 150 150 0 82.813-67.188 150-150 150C67.187 428 0 360.812 0 278c0-82.813 67.188-150 150-150Zm25 243.555v-37.11c0-3.515-2.734-6.445-6.055-6.445h-37.5c-3.515 0-6.445 2.93-6.445 6.445v37.11c0 3.515 2.93 6.445 6.445 6.445h37.5c3.32 0 6.055-2.93 6.055-6.445Zm-.39-67.188 3.515-121.289c0-1.367-.586-2.734-1.953-3.516-1.172-.976-2.93-1.562-4.688-1.562h-42.968c-1.758 0-3.516.586-4.688 1.563-1.367.78-1.953 2.148-1.953 3.515l3.32 121.29c0 2.734 2.93 4.882 6.64 4.882h36.134c3.515 0 6.445-2.148 6.64-4.883Z"/>
+</svg>
+
+        </span>Note</p><p>Trong map key phải là duy nhất, nếu trùng thì giá trị mới sẽ ghi đè lên giá trị cũ</p></div>
+
+<h3 id="6-dynamic">6. Dynamic<a hidden class="anchor" aria-hidden="true" href="#6-dynamic">#</a></h3>
+<ul>
+<li>Dynamic đúng như cái tên của nó là kiểu dữ liệu động hay nói cách khác là chấp nhận mọi kiểu dữ liệu</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dart" data-lang="Dart"><span style="display:flex;"><span><span style="color:#66d9ef">dynamic</span> myVariable <span style="color:#f92672">=</span> <span style="color:#ae81ff">42</span>; <span style="color:#75715e">// Kiểu int
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>myVariable <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;hello&#34;</span>; <span style="color:#75715e">// lúc này là kiểu string
+</span></span></span></code></pre></div><ul>
+<li>Hoặc có thể dùng var nhưng không khởi tạo giá trị thì lúc này kiểu dữ liệu mặc định sẽ là dynamic</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dart" data-lang="Dart"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> myName;
+</span></span><span style="display:flex;"><span>myName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Nick&#34;</span>; <span style="color:#75715e">// lúc này là kiểu string
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>nyName <span style="color:#f92672">=</span> <span style="color:#ae81ff">42</span> <span style="color:#75715e">// lúc này là kiểu int
+</span></span></span></code></pre></div><h2 id="nguồn-tham-khảo">Nguồn tham khảo<a hidden class="anchor" aria-hidden="true" href="#nguồn-tham-khảo">#</a></h2>
+<ul>
+<li>Bài viết được tham khảo từ tài liệu của đồng nghiệp</li>
+<li>Series và Dart và Flutter của <a href="https://fxstudio.dev/category/code/flutter-dart/">fxstudio</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    
+    <span>
+        &copy;<script>document.write(new Date().getFullYear())</script> ducpa | Học, học nữa, học mãi <br>
+    </span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+        <br>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

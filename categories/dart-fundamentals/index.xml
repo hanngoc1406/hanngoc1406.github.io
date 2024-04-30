@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on Hi, I&#39;m Phan Anh Duc 👋</title>
-    <link>https://ducpa.id.vn/posts/</link>
-    <description>Recent content in Posts on Hi, I&#39;m Phan Anh Duc 👋</description>
+    <title>Dart Fundamentals on Hi, I&#39;m Phan Anh Duc 👋</title>
+    <link>https://ducpa.id.vn/categories/dart-fundamentals/</link>
+    <description>Recent content in Dart Fundamentals on Hi, I&#39;m Phan Anh Duc 👋</description>
     <generator>Hugo -- 0.125.4</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 30 Apr 2024 15:39:29 +0700</lastBuildDate>
-    <atom:link href="https://ducpa.id.vn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ducpa.id.vn/categories/dart-fundamentals/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hàm trong Dart</title>
       <link>https://ducpa.id.vn/posts/dart_functions/</link>
@@ -28,26 +28,6 @@
       <pubDate>Mon, 29 Apr 2024 15:17:30 +0700</pubDate>
       <guid>https://ducpa.id.vn/posts/dart_fundamentals/</guid>
       <description>Ngôn ngữ lập trình Dart Dart là một ngôn ngữ lập trình được phát triển bởi Google. Dart khá giống với java nên đa phần các lập trình viên Android chuyển dịch sang làm Flutter khá thuận tiện vì sự giống nhau này. Điểm đặt biệt ở dart đó là hỗ trợ biển dịch cả Just in time(JIT) và Ahead of time(AOT) . Ahead Of Time (AOT): Với AOT thì trình biên dịch chuyển ngôn ngữ Dart thẳng sang Native Code giúp hiệu năng tốt nhất có thể (tức là khi chạy chương trình, nó sẽ biên dịch từ đầu đến cuối) Just In Time (JIT): Còn với JIT cho phép hot reloading hoạt động, giúp phát triển sản phẩm nhanh và tiện dụng hơn (được hiểu như việc debug trong ngôn ngữ khác là debug hàm nào chạy hàm đó thì ở đây nó sẽ viết đến đâu biên dịch ngay đến đấy) Cài đặt và chạy Dart trên VSCode Bước 1: Tìm và cài đặt Dart hoặc Flutter từ Extension của VSCode</description>
-    </item>
-    <item>
-      <title>Setup Flutter SDK MacOS</title>
-      <link>https://ducpa.id.vn/posts/setup_flutter_macos/</link>
-      <pubDate>Mon, 29 Apr 2024 15:17:30 +0700</pubDate>
-      <guid>https://ducpa.id.vn/posts/setup_flutter_macos/</guid>
-      <description>1. Cài đặt môi trường cho macOS
-Bước 1: Truy cập Flutter documentation chọn tab Download and install để tải Flutter SDK tương ứng và giải nén vào thư mục bất kì
-Bước 2: Cập nhật system cho flutter
-Chạy lệnh sau để edit /.zshrc nano $HOME/.zshrc Thêm dòng dưới và sau đó ấn tổ hợp phím Ctrl + O và Ctrl + X để thoát export PATH=$HOME/path/to/flutter/bin:$PATH reload lại source .</description>
-    </item>
-    <item>
-      <title>Tạo project mới chỉ sử dụng file xib (Updated to Xcode 15)</title>
-      <link>https://ducpa.id.vn/posts/project_with_xib_only/</link>
-      <pubDate>Mon, 29 Apr 2024 15:17:30 +0700</pubDate>
-      <guid>https://ducpa.id.vn/posts/project_with_xib_only/</guid>
-      <description>Bước 1: Xóa các config và file không cần thiết
-Xóa Main storyboard file base name và Window Application Session Role trong info.plist &amp;gt; Application Scence Manifest &amp;gt; Scene Configuration Xóa bỏ các file không cần thiết Bước 2: Tạo UIViewController mới
-Bước 3: Chỉnh sửa file App Delegate
-Khai báo biến windows var window:UIWindow? Thêm UIViewController mới vào didFinishLaunchingWithOptions window = UIWindow(frame: UIScreen.main.bounds) guard let window = window else { print(&amp;#34;Unexpected result when app&amp;#39;s main window is nill&amp;#34;) return false } window.</description>
     </item>
   </channel>
 </rss>
