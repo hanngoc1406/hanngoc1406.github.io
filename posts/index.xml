@@ -6,8 +6,17 @@
     <description>Recent content in Posts on Hi, I&#39;m Phan Anh Duc 👋</description>
     <generator>Hugo -- 0.125.4</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Apr 2024 15:39:29 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 18 May 2024 08:33:11 +0700</lastBuildDate>
     <atom:link href="https://ducpa.id.vn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Một ứng dụng Flutter cơ bản có gì?</title>
+      <link>https://ducpa.id.vn/posts/flutter-project/</link>
+      <pubDate>Sat, 18 May 2024 08:33:11 +0700</pubDate>
+      <guid>https://ducpa.id.vn/posts/flutter-project/</guid>
+      <description>Tạo Project flutter Để tạo một project flutter ta dùng lệnh sau flutter create --org com.yourdomain your_app_name Trong đó:
+your_app_name tên ứng dụng của bạn. Lưu ý đặt theo format. --org com.yourcompany là applicationId (Android) hay PRODUCT_BUNDLE_IDENTIFIER (iOS) Và để chạy ứng dụng ta dùng lệnh
+flutter run Cấu trúc dự án Sau khi đã tạo được project flutter thì đầu tiên chúng ta cùng tìm hiểu cấu trúc của một dự án flutter Trong đó: android: Nơi chứa code native của Android build sẽ được tạo khi Flutter được thực thi lần đầu tiên.</description>
+    </item>
     <item>
       <title>Hàm trong Dart</title>
       <link>https://ducpa.id.vn/posts/dart_functions/</link>

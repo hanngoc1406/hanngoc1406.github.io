@@ -6,20 +6,20 @@
     <description>Recent content in Categories on Hi, I&#39;m Phan Anh Duc 👋</description>
     <generator>Hugo -- 0.125.4</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Apr 2024 15:39:29 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 18 May 2024 08:33:11 +0700</lastBuildDate>
     <atom:link href="https://ducpa.id.vn/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Dart Fundamentals</title>
-      <link>https://ducpa.id.vn/categories/dart-fundamentals/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ducpa.id.vn/categories/dart-fundamentals/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Flutter</title>
       <link>https://ducpa.id.vn/categories/flutter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ducpa.id.vn/categories/flutter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dart Fundamentals</title>
+      <link>https://ducpa.id.vn/categories/dart-fundamentals/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ducpa.id.vn/categories/dart-fundamentals/</guid>
       <description></description>
     </item>
     <item>

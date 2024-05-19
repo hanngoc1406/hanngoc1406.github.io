@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Một ứng dụng Flutter cơ bản có gì? | Hi, I&#39;m Phan Anh Duc 👋</title>
+<meta name="keywords" content="">
+<meta name="description" content="Tạo Project flutter Để tạo một project flutter ta dùng lệnh sau flutter create --org com.yourdomain your_app_name Trong đó:
+your_app_name tên ứng dụng của bạn. Lưu ý đặt theo format. --org com.yourcompany là applicationId (Android) hay PRODUCT_BUNDLE_IDENTIFIER (iOS) Và để chạy ứng dụng ta dùng lệnh
+flutter run Cấu trúc dự án Sau khi đã tạo được project flutter thì đầu tiên chúng ta cùng tìm hiểu cấu trúc của một dự án flutter Trong đó: android: Nơi chứa code native của Android build sẽ được tạo khi Flutter được thực thi lần đầu tiên.">
+<meta name="author" content="">
+<link rel="canonical" href="https://ducpa.id.vn/posts/flutter-project/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ducpa.id.vn/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ducpa.id.vn/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ducpa.id.vn/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ducpa.id.vn/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ducpa.id.vn/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ducpa.id.vn/posts/flutter-project/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:title" content="Một ứng dụng Flutter cơ bản có gì?" />
+<meta property="og:description" content="Tạo Project flutter Để tạo một project flutter ta dùng lệnh sau flutter create --org com.yourdomain your_app_name Trong đó:
+your_app_name tên ứng dụng của bạn. Lưu ý đặt theo format. --org com.yourcompany là applicationId (Android) hay PRODUCT_BUNDLE_IDENTIFIER (iOS) Và để chạy ứng dụng ta dùng lệnh
+flutter run Cấu trúc dự án Sau khi đã tạo được project flutter thì đầu tiên chúng ta cùng tìm hiểu cấu trúc của một dự án flutter Trong đó: android: Nơi chứa code native của Android build sẽ được tạo khi Flutter được thực thi lần đầu tiên." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ducpa.id.vn/posts/flutter-project/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-05-18T08:33:11+07:00" />
+<meta property="article:modified_time" content="2024-05-18T08:33:11+07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Một ứng dụng Flutter cơ bản có gì?"/>
+<meta name="twitter:description" content="Tạo Project flutter Để tạo một project flutter ta dùng lệnh sau flutter create --org com.yourdomain your_app_name Trong đó:
+your_app_name tên ứng dụng của bạn. Lưu ý đặt theo format. --org com.yourcompany là applicationId (Android) hay PRODUCT_BUNDLE_IDENTIFIER (iOS) Và để chạy ứng dụng ta dùng lệnh
+flutter run Cấu trúc dự án Sau khi đã tạo được project flutter thì đầu tiên chúng ta cùng tìm hiểu cấu trúc của một dự án flutter Trong đó: android: Nơi chứa code native của Android build sẽ được tạo khi Flutter được thực thi lần đầu tiên."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://ducpa.id.vn/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Một ứng dụng Flutter cơ bản có gì?",
+      "item": "https://ducpa.id.vn/posts/flutter-project/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Một ứng dụng Flutter cơ bản có gì?",
+  "name": "Một ứng dụng Flutter cơ bản có gì?",
+  "description": "Tạo Project flutter Để tạo một project flutter ta dùng lệnh sau flutter create --org com.yourdomain your_app_name Trong đó:\nyour_app_name tên ứng dụng của bạn. Lưu ý đặt theo format. --org com.yourcompany là applicationId (Android) hay PRODUCT_BUNDLE_IDENTIFIER (iOS) Và để chạy ứng dụng ta dùng lệnh\nflutter run Cấu trúc dự án Sau khi đã tạo được project flutter thì đầu tiên chúng ta cùng tìm hiểu cấu trúc của một dự án flutter Trong đó: android: Nơi chứa code native của Android build sẽ được tạo khi Flutter được thực thi lần đầu tiên.",
+  "keywords": [
+    
+  ],
+  "articleBody": "Tạo Project flutter Để tạo một project flutter ta dùng lệnh sau flutter create --org com.yourdomain your_app_name Trong đó:\nyour_app_name tên ứng dụng của bạn. Lưu ý đặt theo format. --org com.yourcompany là applicationId (Android) hay PRODUCT_BUNDLE_IDENTIFIER (iOS) Và để chạy ứng dụng ta dùng lệnh\nflutter run Cấu trúc dự án Sau khi đã tạo được project flutter thì đầu tiên chúng ta cùng tìm hiểu cấu trúc của một dự án flutter Trong đó: android: Nơi chứa code native của Android build sẽ được tạo khi Flutter được thực thi lần đầu tiên. Nó chứa các tệp được tạo cần thiết để chạy ứng dụng trên các nền tảng khác nhau. ios: Nơi chứa code native của iOS lib: Nơi chứa mã ứng dụng của bạn. Chúng ta sẽ triển khai mã nguồn của dự án tại đây. test: Đây là thư mực chứa các file để chúng ta viết các unit-test case. pubspec.yaml: Là nơi khai báo các thư viện, config hệ thống. Ngoài ra các bạn còn có thể tạo thêm thư mục trong quá trình phát triển, ví dụ như thư mục assets để chứa các file hình ảnh Đó là những thư mục và file cơ bản của một project flutter và còn một số thư mục nữa chúng ta sẽ tìm hiểu sau trong quá trình học tập. main.dart Khi các bạn mở thư mục lib các bạn sẽ thấy một file tên main.dart có nội dụng như sau void main() { runApp(MyApp()); } // MyApp() Đây chính là hàm main và sẽ được chạy đầu tiên trong project. Bên trong main gọi hàm runApp với đối tượng là MyApp() được truyền vào. MyApp() class MyApp extends StatelessWidget { const MyApp({super.key}); @override Widget build(BuildContext context) { return MaterialApp( title: 'Flutter Demo', theme: ThemeData( colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple), useMaterial3: true, ), home: const HomePage(), ); } } Trong đó ta thấy MyApp kế thừa StatelessWidget và ghi đè phương thức build trả về MaterialApp, là một widget cung cấp cho lập trình viên một bộ khung trong quá trình phát triển ứng dụng như title, theme, home. Mỗi ứng dụng Flutter chỉ nên chứa 1 MaterialApp. Và trong MaterialApp ta lại thấy có home với đối tượng là MyHomePage() StatelessWidget Khi màn hình chúng ta không cần thay đổi gì về nội dung (hiển thị tĩnh) thì sẽ kế thừa StatelessWidget và khi kế thừa StatelessWidget thì chúng ta phải ghi đè phương thức build như ở trên. class HomePage extends StatelessWidget { const HomePage({super.key}); @override Widget build(BuildContext context) { return Scaffold( appBar: AppBar( title: const Text('Home'), backgroundColor: Colors.blueAccent, ), body: const Center( child: Text('Hello, World!'), ), ); } } Ở đây chúng ta thấy khi ghi đè build sẽ trả về 1 đối tượng Scaffold, là 1 widget cung cấp cho lập trình viên một bộ khung chứa sẵn các thuộc tính quan trong để xây dựng giao diện 1 màn hình như appBar, body, FloatingActionButton,… Trong Scaffold ta thấy có khai báo appBar với một đối tượng là AppBar có thuộc tính title là một Text và body được truyền vào 1 widget là Center có child widget là Text StatefulWidget Khi bạn tạo page cần thay đổi nội thì sẽ kế thừa StatefulWidget và sẽ có một chút thay đổi. Khi sử dụng StatefulWidget sẽ có điểm khác là bạn phải khai báo 2 class là State và widget Mục đích của class này là duy trì state khi Flutter re-render các widget class CounterPage extends StatefulWidget { } class _CounterPageState extends State\u003cCounterPage\u003e { } Ở đây CounterPage là widget và _CounterPageState là State\nSử dụng tiền tố _ của State thì để xem nó là sở hữu riêng của StatefulWidget.\nKhi kế thừa StatefulWidget sẽ cần override createState để tạo đối tượng State\nclass CounterPage extends StatefulWidget { const CounterPage({Key? key}) : super(key: key); @override _CounterPageState createState() =\u003e _CounterPageState(); } Còn khi kế thừa State\u003c\u003e thì cần override build để tạo các widget class _CounterPageState extends State\u003cCounterPage\u003e { var count = 0; @override Widget build(BuildContext context) { return Scaffold( appBar: AppBar( title: Text(\"Home\"), backgroundColor: Colors.blue, ), body: Center( child: Column( crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.center, children: [ Text('Count: $count'), OutlinedButton( onPressed: () { setState(() { count++; }); }, child: const Text('Click Me'), ) ], ),) ); } } Ở đây đây chúng ta khai báo 1 biến count = 0 và 1 Scaffold có chứa 1 Column mà bên trong có 1 Text và 1 OutlinedButton Khi ấn vào nút (onPressed) thì chúng ta sẽ gọi hàm setState() để set lại giá trị cho biến count = count + 1, có nghĩa là mỗi lần ấn nút thì giá trị count sẽ tăng lên 1. Tổng kết Tạo một project flutter bằng command line Cấu trúc của một dự án Flutter Cách sử dụng StatelessWidget và StatefulWidget Nguồn tham khảo Bài viết được tham khảo từ các nguồn tài liệu của đồng nghiệp Series và Dart và Flutter của fxstudio ",
+  "wordCount" : "828",
+  "inLanguage": "en",
+  "datePublished": "2024-05-18T08:33:11+07:00",
+  "dateModified": "2024-05-18T08:33:11+07:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ducpa.id.vn/posts/flutter-project/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hi, I'm Phan Anh Duc 👋",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ducpa.id.vn/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ducpa.id.vn/" accesskey="h" title="Hi, I&#39;m Phan Anh Duc 👋 (Alt + H)">Hi, I&#39;m Phan Anh Duc 👋</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ducpa.id.vn/categories/dart-fundamentals/" title="Dart Fundamentals">
+                    <span>Dart Fundamentals</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ducpa.id.vn/categories/flutter/" title="Flutter">
+                    <span>Flutter</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ducpa.id.vn/categories/ios-development-notes/" title="iOS Development Notes">
+                    <span>iOS Development Notes</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://ducpa.id.vn/">Home</a>&nbsp;»&nbsp;<a href="https://ducpa.id.vn/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Một ứng dụng Flutter cơ bản có gì?
+    </h1>
+    <div class="post-meta"><span title='2024-05-18 08:33:11 +0700 +07'>May 18, 2024</span>&nbsp;·&nbsp;4 min
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="tạo-project-flutter">Tạo Project flutter<a hidden class="anchor" aria-hidden="true" href="#tạo-project-flutter">#</a></h2>
+<ul>
+<li>Để tạo một project flutter ta dùng lệnh sau</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>flutter create --org com.yourdomain your_app_name
+</span></span></code></pre></div><ul>
+<li>
+<p>Trong đó:</p>
+<ul>
+<li><code>your_app_name</code> tên ứng dụng của bạn. Lưu ý đặt theo format.</li>
+<li><code>--org com.yourcompany</code> là <code>applicationId</code> (Android) hay <code>PRODUCT_BUNDLE_IDENTIFIER</code> (iOS)</li>
+</ul>
+</li>
+<li>
+<p>Và để chạy ứng dụng ta dùng lệnh</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>flutter run
+</span></span></code></pre></div><h2 id="cấu-trúc-dự-án">Cấu trúc dự án<a hidden class="anchor" aria-hidden="true" href="#cấu-trúc-dự-án">#</a></h2>
+<ul>
+<li>Sau khi đã tạo được project flutter thì đầu tiên chúng ta cùng tìm hiểu cấu trúc của một dự án flutter</li>
+</ul>
+<p><img loading="lazy" src="./images/project_1.png#center" alt="Flutter project"  />
+</p>
+<ul>
+<li>Trong đó:
+<ul>
+<li><code>android</code>: Nơi chứa code native của Android</li>
+<li><code>build</code> sẽ được tạo khi Flutter được thực thi lần đầu tiên. Nó chứa các tệp được tạo cần thiết để chạy ứng dụng trên các nền tảng khác nhau.</li>
+<li><code>ios</code>: Nơi chứa code native của iOS</li>
+<li><code>lib</code>: Nơi chứa mã ứng dụng của bạn. Chúng ta sẽ triển khai mã nguồn của dự án tại đây.</li>
+<li><code>test</code>: Đây là thư mực chứa các file để chúng ta viết các unit-test case.</li>
+<li><code>pubspec.yaml</code>: Là nơi khai báo các thư viện, config hệ thống.</li>
+<li>Ngoài ra các bạn còn có thể tạo thêm thư mục trong quá trình phát triển, ví dụ như thư mục <strong>assets</strong> để chứa các file hình ảnh</li>
+</ul>
+</li>
+<li>Đó là những thư mục và file cơ bản của một project flutter và còn một số thư mục nữa chúng ta sẽ tìm hiểu sau trong quá trình học tập.</li>
+</ul>
+<h2 id="maindart">main.dart<a hidden class="anchor" aria-hidden="true" href="#maindart">#</a></h2>
+<ul>
+<li>Khi các bạn mở thư mục lib các bạn sẽ thấy một file tên <code>main.dart</code> có nội dụng như sau</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dart" data-lang="Dart"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> main() {
+</span></span><span style="display:flex;"><span>  runApp(MyApp());
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// MyApp()
+</span></span></span></code></pre></div><ul>
+<li>Đây chính là hàm main và sẽ được chạy đầu tiên trong project.</li>
+<li>Bên trong main gọi hàm <code>runApp</code> với đối tượng là <code>MyApp()</code> được truyền vào.</li>
+</ul>
+<h2 id="myapp">MyApp()<a hidden class="anchor" aria-hidden="true" href="#myapp">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dart" data-lang="Dart"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyApp</span> <span style="color:#66d9ef">extends</span> StatelessWidget {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> MyApp({<span style="color:#66d9ef">super</span>.key});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>override
+</span></span><span style="display:flex;"><span>  Widget build(BuildContext context) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> MaterialApp(
+</span></span><span style="display:flex;"><span>      title: <span style="color:#e6db74">&#39;Flutter Demo&#39;</span>,
+</span></span><span style="display:flex;"><span>      theme: ThemeData(
+</span></span><span style="display:flex;"><span>        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+</span></span><span style="display:flex;"><span>        useMaterial3: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>      ),
+</span></span><span style="display:flex;"><span>      home: <span style="color:#66d9ef">const</span> HomePage(),
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Trong đó ta thấy <code>MyApp</code> kế thừa <code>StatelessWidget</code> và ghi đè phương thức <code>build</code> trả về <code>MaterialApp</code>, là một widget cung cấp cho lập trình viên một bộ khung trong quá trình phát triển ứng dụng như <code>title</code>, <code>theme</code>, <code>home</code>. Mỗi ứng dụng Flutter chỉ nên chứa 1 <code>MaterialApp</code>.</li>
+<li>Và trong <code>MaterialApp</code> ta lại thấy có <code>home</code> với đối tượng là <code>MyHomePage()</code></li>
+</ul>
+<p><img loading="lazy" src="./images/project_3.png#center" alt="Home Page"  />
+</p>
+<h2 id="statelesswidget">StatelessWidget<a hidden class="anchor" aria-hidden="true" href="#statelesswidget">#</a></h2>
+<ul>
+<li>Khi màn hình chúng ta không cần thay đổi gì về nội dung (hiển thị tĩnh) thì sẽ kế thừa <code>StatelessWidget</code> và khi kế thừa StatelessWidget thì chúng ta phải ghi đè phương thức <code>build</code> như ở trên.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dart" data-lang="Dart"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HomePage</span> <span style="color:#66d9ef">extends</span> StatelessWidget {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> HomePage({<span style="color:#66d9ef">super</span>.key});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>override
+</span></span><span style="display:flex;"><span>  Widget build(BuildContext context) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> Scaffold(
+</span></span><span style="display:flex;"><span>      appBar: AppBar(
+</span></span><span style="display:flex;"><span>        title: <span style="color:#66d9ef">const</span> Text(<span style="color:#e6db74">&#39;Home&#39;</span>),
+</span></span><span style="display:flex;"><span>        backgroundColor: Colors.blueAccent,
+</span></span><span style="display:flex;"><span>        ),
+</span></span><span style="display:flex;"><span>        body: <span style="color:#66d9ef">const</span> Center(
+</span></span><span style="display:flex;"><span>          child: Text(<span style="color:#e6db74">&#39;Hello, World!&#39;</span>),
+</span></span><span style="display:flex;"><span>        ),
+</span></span><span style="display:flex;"><span>      );
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Ở đây chúng ta thấy khi ghi đè build sẽ trả về 1 đối tượng <code>Scaffold</code>, là 1 widget cung cấp cho lập trình viên một bộ khung chứa sẵn các thuộc tính quan trong để xây dựng giao diện 1 màn hình như <code>appBar</code>, <code>body</code>, <code>FloatingActionButton</code>,&hellip;</li>
+<li>Trong Scaffold ta thấy có khai báo <code>appBar</code> với một đối tượng là <code>AppBar</code> có thuộc tính title là một <code>Text</code> và body được truyền vào 1 widget là <code>Center</code> có child widget là <code>Text</code></li>
+</ul>
+<h2 id="statefulwidget">StatefulWidget<a hidden class="anchor" aria-hidden="true" href="#statefulwidget">#</a></h2>
+<ul>
+<li>Khi bạn tạo page cần thay đổi nội thì sẽ kế thừa <code>StatefulWidget</code> và sẽ có một chút thay đổi.</li>
+<li>Khi sử dụng StatefulWidget sẽ có điểm khác là bạn phải khai báo 2 class là <code>State</code> và <code>widget</code></li>
+<li>Mục đích của class này là duy trì state khi Flutter re-render các widget</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dart" data-lang="Dart"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CounterPage</span> <span style="color:#66d9ef">extends</span> StatefulWidget {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">_CounterPageState</span> <span style="color:#66d9ef">extends</span> State<span style="color:#f92672">&lt;</span>CounterPage<span style="color:#f92672">&gt;</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>
+<p>Ở đây <code>CounterPage</code> là <strong>widget</strong> và <code>_CounterPageState</code> là <strong>State</strong></p>
+</li>
+<li>
+<p>Sử dụng tiền tố _ của State thì để xem nó là sở hữu riêng của StatefulWidget.</p>
+</li>
+<li>
+<p>Khi kế thừa StatefulWidget sẽ cần override <code>createState</code> để tạo đối tượng State</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dart" data-lang="Dart"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CounterPage</span> <span style="color:#66d9ef">extends</span> StatefulWidget {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> CounterPage({Key<span style="color:#f92672">?</span> key}) <span style="color:#f92672">:</span> <span style="color:#66d9ef">super</span>(key: key);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>override
+</span></span><span style="display:flex;"><span>  _CounterPageState createState() <span style="color:#f92672">=&gt;</span> _CounterPageState();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Còn khi kế thừa State&lt;&gt; thì cần override <code>build</code> để tạo các widget</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Dart" data-lang="Dart"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">_CounterPageState</span> <span style="color:#66d9ef">extends</span> State<span style="color:#f92672">&lt;</span>CounterPage<span style="color:#f92672">&gt;</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>override
+</span></span><span style="display:flex;"><span>  Widget build(BuildContext context) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> Scaffold(
+</span></span><span style="display:flex;"><span>        appBar: AppBar(
+</span></span><span style="display:flex;"><span>          title: Text(<span style="color:#e6db74">&#34;Home&#34;</span>),
+</span></span><span style="display:flex;"><span>          backgroundColor: Colors.blue,
+</span></span><span style="display:flex;"><span>        ),
+</span></span><span style="display:flex;"><span>        body: Center(
+</span></span><span style="display:flex;"><span>          child: Column(
+</span></span><span style="display:flex;"><span>          crossAxisAlignment: CrossAxisAlignment.center,
+</span></span><span style="display:flex;"><span>          mainAxisAlignment: MainAxisAlignment.center,
+</span></span><span style="display:flex;"><span>          children: [
+</span></span><span style="display:flex;"><span>            Text(<span style="color:#e6db74">&#39;Count: </span><span style="color:#e6db74">$</span>count<span style="color:#e6db74">&#39;</span>),
+</span></span><span style="display:flex;"><span>            OutlinedButton(
+</span></span><span style="display:flex;"><span>              onPressed: () {
+</span></span><span style="display:flex;"><span>                setState(() {
+</span></span><span style="display:flex;"><span>                  count<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>                });
+</span></span><span style="display:flex;"><span>              },
+</span></span><span style="display:flex;"><span>              child: <span style="color:#66d9ef">const</span> Text(<span style="color:#e6db74">&#39;Click Me&#39;</span>),
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>          ],
+</span></span><span style="display:flex;"><span>        ),)
+</span></span><span style="display:flex;"><span>      );
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Ở đây đây chúng ta khai báo 1 biến <code>count = 0</code> và 1 <code>Scaffold</code> có chứa 1 <code>Column</code> mà bên trong có 1 <code>Text</code> và 1 <code>OutlinedButton</code></li>
+<li>Khi ấn vào nút (<code>onPressed</code>) thì chúng ta sẽ gọi hàm <code>setState()</code> để set lại giá trị cho biến count = count + 1, có nghĩa là mỗi lần ấn nút thì giá trị count sẽ tăng lên 1.</li>
+</ul>
+<p><img loading="lazy" src="./images/project_2.png#center" alt="Counter Page"  />
+</p>
+<h2 id="tổng-kết">Tổng kết<a hidden class="anchor" aria-hidden="true" href="#tổng-kết">#</a></h2>
+<ul>
+<li>Tạo một project flutter bằng command line</li>
+<li>Cấu trúc của một dự án Flutter</li>
+<li>Cách sử dụng <code>StatelessWidget</code> và <code>StatefulWidget</code></li>
+</ul>
+<h2 id="nguồn-tham-khảo">Nguồn tham khảo<a hidden class="anchor" aria-hidden="true" href="#nguồn-tham-khảo">#</a></h2>
+<ul>
+<li>Bài viết được tham khảo từ các nguồn tài liệu của đồng nghiệp</li>
+<li>Series và Dart và Flutter của <a href="https://fxstudio.dev/category/code/flutter-dart/">fxstudio</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    
+    <span>
+        &copy;<script>document.write(new Date().getFullYear())</script> ducpa | Học, học nữa, học mãi <br>
+    </span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+        <br>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
