@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Cài đặt Wordpress trên XAMPP | Hi, I&#39;m Phan Anh Duc 👋</title>
+<meta name="keywords" content="">
+<meta name="description" content="1. Wordpress là gì
+WordPress là một nền tảng quản lý nội dung (CMS hay đầy đủ là Content Management System) miễn phí và mã nguồn mở, cho phép người dùng tạo và quản lý các trang web, blog, cửa hàng trực tuyến và nhiều loại website khác một cách dễ dàng và nhanh chóng. WordPress là một trong những CMS phổ biến nhất thế giới, được sử dụng bởi hơn 40% các website trên internet.">
+<meta name="author" content="">
+<link rel="canonical" href="https://ducpa.id.vn/posts/setup-wp/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ducpa.id.vn/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ducpa.id.vn/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ducpa.id.vn/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ducpa.id.vn/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ducpa.id.vn/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ducpa.id.vn/posts/setup-wp/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:title" content="Cài đặt Wordpress trên XAMPP" />
+<meta property="og:description" content="1. Wordpress là gì
+WordPress là một nền tảng quản lý nội dung (CMS hay đầy đủ là Content Management System) miễn phí và mã nguồn mở, cho phép người dùng tạo và quản lý các trang web, blog, cửa hàng trực tuyến và nhiều loại website khác một cách dễ dàng và nhanh chóng. WordPress là một trong những CMS phổ biến nhất thế giới, được sử dụng bởi hơn 40% các website trên internet." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ducpa.id.vn/posts/setup-wp/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-07-18T19:49:09+07:00" />
+<meta property="article:modified_time" content="2024-07-18T19:49:09+07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Cài đặt Wordpress trên XAMPP"/>
+<meta name="twitter:description" content="1. Wordpress là gì
+WordPress là một nền tảng quản lý nội dung (CMS hay đầy đủ là Content Management System) miễn phí và mã nguồn mở, cho phép người dùng tạo và quản lý các trang web, blog, cửa hàng trực tuyến và nhiều loại website khác một cách dễ dàng và nhanh chóng. WordPress là một trong những CMS phổ biến nhất thế giới, được sử dụng bởi hơn 40% các website trên internet."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://ducpa.id.vn/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Cài đặt Wordpress trên XAMPP",
+      "item": "https://ducpa.id.vn/posts/setup-wp/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Cài đặt Wordpress trên XAMPP",
+  "name": "Cài đặt Wordpress trên XAMPP",
+  "description": "1. Wordpress là gì\nWordPress là một nền tảng quản lý nội dung (CMS hay đầy đủ là Content Management System) miễn phí và mã nguồn mở, cho phép người dùng tạo và quản lý các trang web, blog, cửa hàng trực tuyến và nhiều loại website khác một cách dễ dàng và nhanh chóng. WordPress là một trong những CMS phổ biến nhất thế giới, được sử dụng bởi hơn 40% các website trên internet.",
+  "keywords": [
+    
+  ],
+  "articleBody": "1. Wordpress là gì\nWordPress là một nền tảng quản lý nội dung (CMS hay đầy đủ là Content Management System) miễn phí và mã nguồn mở, cho phép người dùng tạo và quản lý các trang web, blog, cửa hàng trực tuyến và nhiều loại website khác một cách dễ dàng và nhanh chóng. WordPress là một trong những CMS phổ biến nhất thế giới, được sử dụng bởi hơn 40% các website trên internet.\nPhân biệt wordpress.com và wordpress.org\nWordPress.com là một dịch vụ lưu trữ website miễn phí hoặc có phí của công ty Automattic, sử dụng nền tảng WordPress WordPress.org là trang web cung cấp mã nguồn của WordPress để người dùng có thể tự tải về và cài đặt trên máy chủ riêng của họ hoặc của nhà cung cấp lưu trữ khác Và với bài viết này sẽ sử dụng WordPress.org cài đặt trên server ảo XAMPP với mục đích học tập\n2. Cài đặt wordpress.org trên máy chủ ảo XAMPP\nXAMPP cung cấp một môi trường phát triển web trên máy tính cá nhân của bạn, cho phép bạn chạy các ứng dụng web trên môi trường local (máy chủ cục bộ) để phát triển và kiểm thử trước khi triển khai lên môi trường sản phẩm thực tế.\nBước 1: Truy cập trang web chính thức của XAMPP và chọn Download với phiên bản mới nhất là 8.2.12/PHP 8.2.12 Bước 2: Chạy file setup và ấn Next đến đoạn này thì chỉnh như ảnh Bước 3: Đến đoạn này thì giữ nguyên và ấn Next để bắt đầu quá trình cài đặt Bước 4: Sau khi quá trình cài đặt kết thúc hãy ấn Finish để khởi động bảng điều khiển của XAMPP 3. Khởi động hosting ảo\nSau khi bảng điểu khiển của XAMPP được khởi động thì bạn hãy ấn start 2 cái như hình là Apache và MySQL Hiện như vậy là đã Oke\nTruy cập localhost hoặc 127.0.0.1 để kiểm tra\n4. Cài đặt Wordpress trên XAMPP\nBước 1: truy cập wordpress.org và ấn Download Bước 2: tạo một thư mục mới trong C:\\xampp\\htdocs. VD: ở đây mình tạo thư mục tên là wp Bước 3: Giải nén và copy toàn bộ file đã tải lúc nãy vào trong thư mục đã tạo ở bước 2 (ở đây ví dụ là wp) Bước 4: Truy cập localhost/phpmyadmin để tạo database cho wordpress Đoạn này bạn sẽ tự đặt tên cho database và chọn utf8mb4_unicode_ci. Ở đây mình đặt là wp Bước 5: truy cập localhost/ten_thu_muc với ten_thu_muc la tên đã tạo ở bước 2, ở đây là wp để bắt đầu cài đặt Wordpress Đoạn này sẽ bắt đầu cài đặt database cho wordpress Ở mục này hãy điền các thông tin như sau và ấn submit:\nDatabase Name: như đã tạo ở bước 4 (ở đây là wp) Username: root Password: bỏ trống Database Host: Giữ nguyên Table Prefix: Giữ nguyên Ấn Run the installation để tiếp tục quá trình cài đặt Bước 6: Điền page title, username và mật khẩu và ấn Install Wordpress. Username và Passowrd đặt tùy nhưng hãy nhớ để đăng nhập wordpress sau khi cài đặt xong Đến đoạn này là đã xong bạn dùng tài khoản và mật khẩu vừa tạo ở trên để đăng nhập. Đến đây là xong rồi. Chào mừng bạn đến với Wordpress! ",
+  "wordCount" : "566",
+  "inLanguage": "en",
+  "datePublished": "2024-07-18T19:49:09+07:00",
+  "dateModified": "2024-07-18T19:49:09+07:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ducpa.id.vn/posts/setup-wp/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hi, I'm Phan Anh Duc 👋",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ducpa.id.vn/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ducpa.id.vn/" accesskey="h" title="Hi, I&#39;m Phan Anh Duc 👋 (Alt + H)">Hi, I&#39;m Phan Anh Duc 👋</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ducpa.id.vn/categories/basic-wordpress/" title="Basic Wordpress">
+                    <span>Basic Wordpress</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ducpa.id.vn/categories/dart-fundamentals/" title="Dart Fundamentals">
+                    <span>Dart Fundamentals</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ducpa.id.vn/categories/flutter/" title="Flutter">
+                    <span>Flutter</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ducpa.id.vn/categories/ios-development-notes/" title="iOS Development Notes">
+                    <span>iOS Development Notes</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://ducpa.id.vn/">Home</a>&nbsp;»&nbsp;<a href="https://ducpa.id.vn/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Cài đặt Wordpress trên XAMPP
+    </h1>
+    <div class="post-meta"><span title='2024-07-18 19:49:09 +0700 +07'>July 18, 2024</span>&nbsp;·&nbsp;3 min
+
+</div>
+  </header> 
+  <div class="post-content"><p><strong>1. Wordpress là gì</strong></p>
+<ul>
+<li>
+<p><strong>WordPress</strong> là một nền tảng quản lý nội dung (CMS hay đầy đủ là Content Management System) miễn phí và mã nguồn mở, cho phép người dùng tạo và quản lý các trang web, blog, cửa hàng trực tuyến và nhiều loại website khác một cách dễ dàng và nhanh chóng. WordPress là một trong những CMS phổ biến nhất thế giới, được sử dụng bởi hơn 40% các website trên internet.</p>
+</li>
+<li>
+<p><strong>Phân biệt wordpress.com và wordpress.org</strong></p>
+<ul>
+<li><strong>WordPress.com</strong> là một dịch vụ lưu trữ website miễn phí hoặc có phí của công ty Automattic, sử dụng nền tảng WordPress</li>
+<li><strong>WordPress.org</strong> là trang web cung cấp mã nguồn của WordPress để người dùng có thể tự tải về và cài đặt trên máy chủ riêng của họ hoặc của nhà cung cấp lưu trữ khác</li>
+</ul>
+</li>
+<li>
+<p>Và với bài viết này sẽ sử dụng <strong>WordPress.org</strong> cài đặt trên server ảo XAMPP với mục đích học tập</p>
+</li>
+</ul>
+<p><strong>2. Cài đặt wordpress.org trên máy chủ ảo XAMPP</strong></p>
+<ul>
+<li>
+<p>XAMPP cung cấp một môi trường phát triển web trên máy tính cá nhân của bạn, cho phép bạn chạy các ứng dụng web trên môi trường local (máy chủ cục bộ) để phát triển và kiểm thử trước khi triển khai lên môi trường sản phẩm thực tế.</p>
+</li>
+<li>
+<p><strong>Bước 1</strong>: Truy cập trang web chính thức của <a href="https://www.apachefriends.org/">XAMPP</a> và chọn Download với phiên bản mới nhất là <strong>8.2.12/PHP 8.2.12</strong>
+<img loading="lazy" src="./images/wp-setup-1.png#center" alt="Download Xampp"  />
+</p>
+</li>
+<li>
+<p>Bước 2: Chạy file setup và ấn <strong>Next</strong> đến đoạn này thì chỉnh như ảnh
+<img loading="lazy" src="./images/wp-setup-2.png#center" alt="Setup Xampp"  />
+</p>
+</li>
+<li>
+<p>Bước 3: Đến đoạn này thì giữ nguyên và ấn <strong>Next</strong> để bắt đầu quá trình cài đặt
+<img loading="lazy" src="./images/wp-setup-3.png#center" alt="Setup Xampp"  />
+</p>
+</li>
+<li>
+<p>Bước 4: Sau khi quá trình cài đặt kết thúc hãy ấn <strong>Finish</strong> để khởi động bảng điều khiển của XAMPP
+<img loading="lazy" src="./images/wp-setup-4.png#center" alt="Setup Xampp"  />
+</p>
+</li>
+</ul>
+<p><strong>3. Khởi động hosting ảo</strong></p>
+<ul>
+<li>
+<p>Sau khi bảng điểu khiển của XAMPP được khởi động thì bạn hãy ấn start 2 cái như hình là <strong>Apache</strong> và <strong>MySQL</strong>
+<img loading="lazy" src="./images/wp-setup-5.png#center" alt="Setup Xampp"  />
+</p>
+</li>
+<li>
+<p>Hiện như vậy là đã Oke</p>
+</li>
+<li>
+<p><img loading="lazy" src="./images/wp-setup-6.png" alt="Setup Xampp"  />
+</p>
+</li>
+<li>
+<p>Truy cập <code>localhost</code> hoặc <code>127.0.0.1</code> để kiểm tra</p>
+</li>
+<li>
+<p><img loading="lazy" src="./images/wp-setup-7.png#center" alt="Setup Xampp"  />
+</p>
+</li>
+</ul>
+<p><strong>4. Cài đặt Wordpress trên XAMPP</strong></p>
+<ul>
+<li>
+<p><strong>Bước 1:</strong> truy cập <a href="https://wordpress.org/download/">wordpress.org</a> và ấn <strong>Download</strong>
+<img loading="lazy" src="./images/wp-setup-8.png#center" alt="Setup Xampp"  />
+</p>
+</li>
+<li>
+<p><strong>Bước 2:</strong> tạo một thư mục mới trong <code>C:\xampp\htdocs</code>. VD: ở đây mình tạo thư mục tên là <code>wp</code>
+<img loading="lazy" src="./images/wp-setup-9.png#center" alt="Setup Xampp"  />
+</p>
+</li>
+<li>
+<p><strong>Bước 3:</strong> Giải nén và copy toàn bộ file đã tải lúc nãy vào trong thư mục đã tạo ở bước 2 (ở đây ví dụ là <code>wp</code>)
+<img loading="lazy" src="./images/wp-setup-10.png#center" alt="Setup Xampp"  />
+</p>
+</li>
+<li>
+<p><strong>Bước 4:</strong> Truy cập <code>localhost/phpmyadmin</code> để tạo database cho wordpress
+<img loading="lazy" src="./images/wp-setup-11.png#center" alt="Setup Xampp"  />
+</p>
+</li>
+<li>
+<p>Đoạn này bạn sẽ tự đặt tên cho database và chọn <code>utf8mb4_unicode_ci</code>. Ở đây mình đặt là <code>wp</code>
+<img loading="lazy" src="./images/wp-setup-12.png#center" alt="Setup Xampp"  />
+</p>
+</li>
+<li>
+<p><strong>Bước 5:</strong> truy cập localhost/ten_thu_muc với ten_thu_muc la tên đã tạo ở bước 2, ở đây là <code>wp</code> để bắt đầu cài đặt Wordpress
+<img loading="lazy" src="./images/wp-setup-13.png#center" alt="Setup Xampp"  />
+</p>
+</li>
+<li>
+<p>Đoạn này sẽ bắt đầu cài đặt database cho wordpress
+<img loading="lazy" src="./images/wp-setup-14.png#center" alt="Setup Xampp"  />
+</p>
+</li>
+<li>
+<p>Ở mục này hãy điền các thông tin như sau và ấn <strong>submit</strong>:</p>
+</li>
+</ul>
+<pre tabindex="0"><code>Database Name: như đã tạo ở bước 4 (ở đây là wp)
+Username: root
+Password: bỏ trống
+Database Host: Giữ nguyên
+Table Prefix: Giữ nguyên
+</code></pre><p><img loading="lazy" src="./images/wp-setup-15.png#center" alt="Setup Xampp"  />
+</p>
+<ul>
+<li>
+<p>Ấn <strong>Run the installation</strong> để tiếp tục quá trình cài đặt
+<img loading="lazy" src="./images/wp-setup-16.png#center" alt="Setup Xampp"  />
+</p>
+</li>
+<li>
+<p><strong>Bước 6:</strong> Điền page title, username và mật khẩu và ấn <strong>Install Wordpress</strong>. Username và Passowrd đặt tùy nhưng hãy nhớ để đăng nhập wordpress sau khi cài đặt xong
+<img loading="lazy" src="./images/wp-setup-17.png#center" alt="Setup Xampp"  />
+</p>
+</li>
+<li>
+<p>Đến đoạn này là đã xong bạn dùng tài khoản và mật khẩu vừa tạo ở trên để đăng nhập.
+<img loading="lazy" src="./images/wp-setup-18.png#center" alt="Setup Xampp"  />
+</p>
+</li>
+<li>
+<p>Đến đây là xong rồi. Chào mừng bạn đến với Wordpress!
+<img loading="lazy" src="./images/wp-setup-19.png#center" alt="Setup Xampp"  />
+</p>
+</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    
+    <span>
+        &copy;<script>document.write(new Date().getFullYear())</script> ducpa | Học, học nữa, học mãi.
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+        <br>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

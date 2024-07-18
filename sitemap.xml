@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ducpa.id.vn/categories/basic-wordpress/</loc>
+    <lastmod>2024-07-18T19:49:09+07:00</lastmod>
+  </url><url>
+    <loc>https://ducpa.id.vn/posts/setup-wp/</loc>
+    <lastmod>2024-07-18T19:49:09+07:00</lastmod>
+  </url><url>
     <loc>https://ducpa.id.vn/categories/</loc>
-    <lastmod>2024-05-18T08:33:11+07:00</lastmod>
+    <lastmod>2024-07-18T19:49:09+07:00</lastmod>
+  </url><url>
+    <loc>https://ducpa.id.vn/</loc>
+    <lastmod>2024-07-18T19:49:09+07:00</lastmod>
+  </url><url>
+    <loc>https://ducpa.id.vn/posts/</loc>
+    <lastmod>2024-07-18T19:49:09+07:00</lastmod>
   </url><url>
     <loc>https://ducpa.id.vn/categories/flutter/</loc>
     <lastmod>2024-05-18T08:33:11+07:00</lastmod>
   </url><url>
-    <loc>https://ducpa.id.vn/</loc>
-    <lastmod>2024-05-18T08:33:11+07:00</lastmod>
-  </url><url>
     <loc>https://ducpa.id.vn/posts/flutter-project/</loc>
-    <lastmod>2024-05-18T08:33:11+07:00</lastmod>
-  </url><url>
-    <loc>https://ducpa.id.vn/posts/</loc>
     <lastmod>2024-05-18T08:33:11+07:00</lastmod>
   </url><url>
     <loc>https://ducpa.id.vn/categories/dart-fundamentals/</loc>

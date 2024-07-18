@@ -6,8 +6,16 @@
     <description>Recent content on Hi, I&#39;m Phan Anh Duc 👋</description>
     <generator>Hugo -- 0.125.4</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 May 2024 08:33:11 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jul 2024 19:49:09 +0700</lastBuildDate>
     <atom:link href="https://ducpa.id.vn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cài đặt Wordpress trên XAMPP</title>
+      <link>https://ducpa.id.vn/posts/setup-wp/</link>
+      <pubDate>Thu, 18 Jul 2024 19:49:09 +0700</pubDate>
+      <guid>https://ducpa.id.vn/posts/setup-wp/</guid>
+      <description>1. Wordpress là gì
+WordPress là một nền tảng quản lý nội dung (CMS hay đầy đủ là Content Management System) miễn phí và mã nguồn mở, cho phép người dùng tạo và quản lý các trang web, blog, cửa hàng trực tuyến và nhiều loại website khác một cách dễ dàng và nhanh chóng. WordPress là một trong những CMS phổ biến nhất thế giới, được sử dụng bởi hơn 40% các website trên internet.</description>
+    </item>
     <item>
       <title>Một ứng dụng Flutter cơ bản có gì?</title>
       <link>https://ducpa.id.vn/posts/flutter-project/</link>
