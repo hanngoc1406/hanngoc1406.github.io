@@ -7,10 +7,140 @@
 <meta name="robots" content="index, follow">
 <title>Hàm trong Dart | Hi, I&#39;m Phan Anh Duc 👋</title>
 <meta name="keywords" content="">
-<meta name="description" content="Đây là một khái niệm đã khá quen thuộc với anh em học IT, đơn giản hàm là một khối lệnh thực hiện một tác vụ, khối lệnh này được dùng nhiều lần nên gom chúng tại thành một hàm Trong Dart mọi thứ đều là đối tượng nên hàm cũng vậy, tức là bạn có thể kế thừa hàm. void main() { // Gọi hàm printMyName(); helloPersonAndPet(&#39;Nick&#39;, &#39;Boo&#39;); var hello = sayHello(&#34;Duc&#34;); print(hello); } void printMyName() { print(&#39;Phan Anh Duc&#39;); } // Hàm trả về giá trị String sayHello(String name) { print(&#34;xin chao $name&#34;); } void helloPersonAndPet(String person, String pet) { print(&#39;Hello, $person, and your furry friend, $pet!">
+<meta name="description" content="
+Đây là một khái niệm đã khá quen thuộc với anh em học IT, đơn giản hàm là một khối lệnh thực hiện một tác vụ, khối lệnh này được dùng nhiều lần nên gom chúng tại thành một hàm
+Trong Dart mọi thứ đều là đối tượng nên hàm cũng vậy, tức là bạn có thể kế thừa hàm.
+
+void main() {
+    // Gọi hàm 
+    printMyName();
+    helloPersonAndPet(&#39;Nick&#39;, &#39;Boo&#39;);
+    
+    var hello = sayHello(&#34;Duc&#34;);
+    print(hello);
+}
+
+void printMyName() {
+    print(&#39;Phan Anh Duc&#39;);
+}
+
+// Hàm trả về giá trị
+String sayHello(String name) {
+    print(&#34;xin chao $name&#34;);
+}
+
+void helloPersonAndPet(String person, String pet) {
+    print(&#39;Hello, $person, and your furry friend, $pet!&#39;);
+}
+
+Optional Parameters
+
+Tham số có thể có truyền vào hoặc không truyền vào được khai trong ngoặc vuông [] với dấu ? và có kiểu dữ liệu là optinal
+Bạn cũng có thể cung cấp giá trị mặc định cho thêm số optional
+
+
+
+void main() {
+    var optionalParameters = fullName(&#34;Mr&#34;, &#34;Phan&#34;, &#34;Duc&#34;);
+    var optionalParametersDefault = sayFullName(&#34;Phan&#34;, &#34;Duc&#34;);
+
+    print(optionalParameters); // In ra: Mr Phan Duc
+    print(optionalParametersDefault); // In ra: Hello Phan Duc
+}
+
+String fullName(String title, [String? first, String? last]) {
+  // first và last ở đây có kiểu là optional
+    if (first != null &amp;&amp; last != null) {
+        return &#39;$title $first $last&#39;;
+    } else {
+        return &#39;$title&#39;;
+    }
+}
+
+String sayFullName(String first, String last, [String title = &#34;Hello&#34;]) {
+    return &#39;$title $first $last&#39;;
+}
+
+Naming và named parameters
+
+Naming và named về cơ bản là giống nhau nhưng named có thêm từ khóa required và khi có required thì tham số bắt buộc phải truyền vào
+Để khai báo thì dúng ta đặt tên biến trong {}
+Có thể có optional và giá trị mặc định
+
+
+
+void main() {
+  // Khi gọi hàm sẽ có thêm label min và max
+  var checkBetween = withinTolerance(5, min: 0, max: 10);
+  print(checkBetween); // sẽ in ra: true
+
+  var checkBetween2 = withinTolerance2(6, min: 0, max: 5);
+  print(checkBetween2); // sẽ in ra: false
+}
+
+bool withinTolerance(int value, {int min = 0, int max = 10}) {
+  return min &lt;= value &amp;&amp; value &lt;= max;
+}
+
+// named
+bool withinTolerance2(int value, {required int min, required int max}) {
+  return min &lt;= value &amp;&amp; value &lt;= max;
+}
+
+Function cũng có thể trả về dạng dữ liệu dynamic với cách khai báo giống với var
+
+void main() {
+  var dynamicNumber = compliment(10);
+  var dynamicString = compliment(&#34;Hello&#34;);
+  print(dynamicNumber); // sẽ in ra: 10 is a very nice int
+  print(dynamicString); // sẽ in ra: Hello is a very nice String
+}
+
+compliment(number) {
+  var type = number.runtimeType;
+  return &#39;$number is a very nice $type&#39;;
+}
+
+Ngoài ra các bạn còn có thể bỏ luôn tên hàm và khai báo như hàm một kiểu dữ liệu (Anonymous functions).
+Các bạn cũng có thể viết một function trả về một function khác với cấu trúc: Function functionName(params) { return (params) }
+Nếu fuction chỉ có 1 dòng thì return trong Dart cũng có thể việt ngắn gọn lại bằng =&gt;
+
+void main () {
+    // Hàm ẩn danh
+    final multiply = (int a, int b) {
+        return a * b;
+    };
+
+    print(multiply(2, 3)); // sẽ in ra: 6
+
+    // Viết ngắn gọn hơn
+    final multiply2 = (int a, int b) =&gt; a * b;
+    print(multiply2(2, 5)); // sẽ in ra: 10
+
+    // Hàm trả về một hàm khác
+    Function applyMultiplier(num multiplier) {
+        // trả về hàm ẩn danh
+        return (num value) {
+            return value * multiplier;
+        };
+    }
+
+    // triple vẫn là 1 function trả về giá trị value * multiplier của hàm ẩn danh phía trên
+    final triple = applyMultiplier(3);
+    print(triple(6)); // sẽ in ra: 18
+
+    // doubleIt vẫn là 1 function trả về giá trị value * multiplier của hàm ẩn danh phía trên
+    final doubleIt = applyMultiplier(2);
+    print(doubleIt(3)); // sẽ in ra: 6
+}
+Nguồn tham khảo
+
+Bài viết được tham khảo từ tài liệu của đồng nghiệp
+Series và Dart và Flutter của fxstudio
+">
 <meta name="author" content="">
 <link rel="canonical" href="https://ducpa.id.vn/posts/dart_functions/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.2211ca3164be7830024f6aad2b3a2e520843a64f8f048445c3401c1249aa051d.css" integrity="sha256-IhHKMWS&#43;eDACT2qtKzouUghDpk&#43;PBIRFw0AcEkmqBR0=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://ducpa.id.vn/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://ducpa.id.vn/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://ducpa.id.vn/favicon-32x32.png">
@@ -55,19 +185,148 @@
         }
 
     </style>
-</noscript>
-  
+</noscript><meta property="og:url" content="https://ducpa.id.vn/posts/dart_functions/">
+  <meta property="og:site_name" content="Hi, I&#39;m Phan Anh Duc 👋">
+  <meta property="og:title" content="Hàm trong Dart">
+  <meta property="og:description" content=" Đây là một khái niệm đã khá quen thuộc với anh em học IT, đơn giản hàm là một khối lệnh thực hiện một tác vụ, khối lệnh này được dùng nhiều lần nên gom chúng tại thành một hàm Trong Dart mọi thứ đều là đối tượng nên hàm cũng vậy, tức là bạn có thể kế thừa hàm. void main() { // Gọi hàm printMyName(); helloPersonAndPet(&#39;Nick&#39;, &#39;Boo&#39;); var hello = sayHello(&#34;Duc&#34;); print(hello); } void printMyName() { print(&#39;Phan Anh Duc&#39;); } // Hàm trả về giá trị String sayHello(String name) { print(&#34;xin chao $name&#34;); } void helloPersonAndPet(String person, String pet) { print(&#39;Hello, $person, and your furry friend, $pet!&#39;); } Optional Parameters Tham số có thể có truyền vào hoặc không truyền vào được khai trong ngoặc vuông [] với dấu ? và có kiểu dữ liệu là optinal Bạn cũng có thể cung cấp giá trị mặc định cho thêm số optional void main() { var optionalParameters = fullName(&#34;Mr&#34;, &#34;Phan&#34;, &#34;Duc&#34;); var optionalParametersDefault = sayFullName(&#34;Phan&#34;, &#34;Duc&#34;); print(optionalParameters); // In ra: Mr Phan Duc print(optionalParametersDefault); // In ra: Hello Phan Duc } String fullName(String title, [String? first, String? last]) { // first và last ở đây có kiểu là optional if (first != null &amp;&amp; last != null) { return &#39;$title $first $last&#39;; } else { return &#39;$title&#39;; } } String sayFullName(String first, String last, [String title = &#34;Hello&#34;]) { return &#39;$title $first $last&#39;; } Naming và named parameters Naming và named về cơ bản là giống nhau nhưng named có thêm từ khóa required và khi có required thì tham số bắt buộc phải truyền vào Để khai báo thì dúng ta đặt tên biến trong {} Có thể có optional và giá trị mặc định void main() { // Khi gọi hàm sẽ có thêm label min và max var checkBetween = withinTolerance(5, min: 0, max: 10); print(checkBetween); // sẽ in ra: true var checkBetween2 = withinTolerance2(6, min: 0, max: 5); print(checkBetween2); // sẽ in ra: false } bool withinTolerance(int value, {int min = 0, int max = 10}) { return min &lt;= value &amp;&amp; value &lt;= max; } // named bool withinTolerance2(int value, {required int min, required int max}) { return min &lt;= value &amp;&amp; value &lt;= max; } Function cũng có thể trả về dạng dữ liệu dynamic với cách khai báo giống với var void main() { var dynamicNumber = compliment(10); var dynamicString = compliment(&#34;Hello&#34;); print(dynamicNumber); // sẽ in ra: 10 is a very nice int print(dynamicString); // sẽ in ra: Hello is a very nice String } compliment(number) { var type = number.runtimeType; return &#39;$number is a very nice $type&#39;; } Ngoài ra các bạn còn có thể bỏ luôn tên hàm và khai báo như hàm một kiểu dữ liệu (Anonymous functions). Các bạn cũng có thể viết một function trả về một function khác với cấu trúc: Function functionName(params) { return (params) } Nếu fuction chỉ có 1 dòng thì return trong Dart cũng có thể việt ngắn gọn lại bằng =&gt; void main () { // Hàm ẩn danh final multiply = (int a, int b) { return a * b; }; print(multiply(2, 3)); // sẽ in ra: 6 // Viết ngắn gọn hơn final multiply2 = (int a, int b) =&gt; a * b; print(multiply2(2, 5)); // sẽ in ra: 10 // Hàm trả về một hàm khác Function applyMultiplier(num multiplier) { // trả về hàm ẩn danh return (num value) { return value * multiplier; }; } // triple vẫn là 1 function trả về giá trị value * multiplier của hàm ẩn danh phía trên final triple = applyMultiplier(3); print(triple(6)); // sẽ in ra: 18 // doubleIt vẫn là 1 function trả về giá trị value * multiplier của hàm ẩn danh phía trên final doubleIt = applyMultiplier(2); print(doubleIt(3)); // sẽ in ra: 6 } Nguồn tham khảo Bài viết được tham khảo từ tài liệu của đồng nghiệp Series và Dart và Flutter của fxstudio ">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-04-30T15:39:29+07:00">
+    <meta property="article:modified_time" content="2024-04-30T15:39:29+07:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hàm trong Dart">
+<meta name="twitter:description" content="
+Đây là một khái niệm đã khá quen thuộc với anh em học IT, đơn giản hàm là một khối lệnh thực hiện một tác vụ, khối lệnh này được dùng nhiều lần nên gom chúng tại thành một hàm
+Trong Dart mọi thứ đều là đối tượng nên hàm cũng vậy, tức là bạn có thể kế thừa hàm.
 
-<meta property="og:title" content="Hàm trong Dart" />
-<meta property="og:description" content="Đây là một khái niệm đã khá quen thuộc với anh em học IT, đơn giản hàm là một khối lệnh thực hiện một tác vụ, khối lệnh này được dùng nhiều lần nên gom chúng tại thành một hàm Trong Dart mọi thứ đều là đối tượng nên hàm cũng vậy, tức là bạn có thể kế thừa hàm. void main() { // Gọi hàm printMyName(); helloPersonAndPet(&#39;Nick&#39;, &#39;Boo&#39;); var hello = sayHello(&#34;Duc&#34;); print(hello); } void printMyName() { print(&#39;Phan Anh Duc&#39;); } // Hàm trả về giá trị String sayHello(String name) { print(&#34;xin chao $name&#34;); } void helloPersonAndPet(String person, String pet) { print(&#39;Hello, $person, and your furry friend, $pet!" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://ducpa.id.vn/posts/dart_functions/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-04-30T15:39:29+07:00" />
-<meta property="article:modified_time" content="2024-04-30T15:39:29+07:00" />
+void main() {
+    // Gọi hàm 
+    printMyName();
+    helloPersonAndPet(&#39;Nick&#39;, &#39;Boo&#39;);
+    
+    var hello = sayHello(&#34;Duc&#34;);
+    print(hello);
+}
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hàm trong Dart"/>
-<meta name="twitter:description" content="Đây là một khái niệm đã khá quen thuộc với anh em học IT, đơn giản hàm là một khối lệnh thực hiện một tác vụ, khối lệnh này được dùng nhiều lần nên gom chúng tại thành một hàm Trong Dart mọi thứ đều là đối tượng nên hàm cũng vậy, tức là bạn có thể kế thừa hàm. void main() { // Gọi hàm printMyName(); helloPersonAndPet(&#39;Nick&#39;, &#39;Boo&#39;); var hello = sayHello(&#34;Duc&#34;); print(hello); } void printMyName() { print(&#39;Phan Anh Duc&#39;); } // Hàm trả về giá trị String sayHello(String name) { print(&#34;xin chao $name&#34;); } void helloPersonAndPet(String person, String pet) { print(&#39;Hello, $person, and your furry friend, $pet!"/>
+void printMyName() {
+    print(&#39;Phan Anh Duc&#39;);
+}
+
+// Hàm trả về giá trị
+String sayHello(String name) {
+    print(&#34;xin chao $name&#34;);
+}
+
+void helloPersonAndPet(String person, String pet) {
+    print(&#39;Hello, $person, and your furry friend, $pet!&#39;);
+}
+
+Optional Parameters
+
+Tham số có thể có truyền vào hoặc không truyền vào được khai trong ngoặc vuông [] với dấu ? và có kiểu dữ liệu là optinal
+Bạn cũng có thể cung cấp giá trị mặc định cho thêm số optional
+
+
+
+void main() {
+    var optionalParameters = fullName(&#34;Mr&#34;, &#34;Phan&#34;, &#34;Duc&#34;);
+    var optionalParametersDefault = sayFullName(&#34;Phan&#34;, &#34;Duc&#34;);
+
+    print(optionalParameters); // In ra: Mr Phan Duc
+    print(optionalParametersDefault); // In ra: Hello Phan Duc
+}
+
+String fullName(String title, [String? first, String? last]) {
+  // first và last ở đây có kiểu là optional
+    if (first != null &amp;&amp; last != null) {
+        return &#39;$title $first $last&#39;;
+    } else {
+        return &#39;$title&#39;;
+    }
+}
+
+String sayFullName(String first, String last, [String title = &#34;Hello&#34;]) {
+    return &#39;$title $first $last&#39;;
+}
+
+Naming và named parameters
+
+Naming và named về cơ bản là giống nhau nhưng named có thêm từ khóa required và khi có required thì tham số bắt buộc phải truyền vào
+Để khai báo thì dúng ta đặt tên biến trong {}
+Có thể có optional và giá trị mặc định
+
+
+
+void main() {
+  // Khi gọi hàm sẽ có thêm label min và max
+  var checkBetween = withinTolerance(5, min: 0, max: 10);
+  print(checkBetween); // sẽ in ra: true
+
+  var checkBetween2 = withinTolerance2(6, min: 0, max: 5);
+  print(checkBetween2); // sẽ in ra: false
+}
+
+bool withinTolerance(int value, {int min = 0, int max = 10}) {
+  return min &lt;= value &amp;&amp; value &lt;= max;
+}
+
+// named
+bool withinTolerance2(int value, {required int min, required int max}) {
+  return min &lt;= value &amp;&amp; value &lt;= max;
+}
+
+Function cũng có thể trả về dạng dữ liệu dynamic với cách khai báo giống với var
+
+void main() {
+  var dynamicNumber = compliment(10);
+  var dynamicString = compliment(&#34;Hello&#34;);
+  print(dynamicNumber); // sẽ in ra: 10 is a very nice int
+  print(dynamicString); // sẽ in ra: Hello is a very nice String
+}
+
+compliment(number) {
+  var type = number.runtimeType;
+  return &#39;$number is a very nice $type&#39;;
+}
+
+Ngoài ra các bạn còn có thể bỏ luôn tên hàm và khai báo như hàm một kiểu dữ liệu (Anonymous functions).
+Các bạn cũng có thể viết một function trả về một function khác với cấu trúc: Function functionName(params) { return (params) }
+Nếu fuction chỉ có 1 dòng thì return trong Dart cũng có thể việt ngắn gọn lại bằng =&gt;
+
+void main () {
+    // Hàm ẩn danh
+    final multiply = (int a, int b) {
+        return a * b;
+    };
+
+    print(multiply(2, 3)); // sẽ in ra: 6
+
+    // Viết ngắn gọn hơn
+    final multiply2 = (int a, int b) =&gt; a * b;
+    print(multiply2(2, 5)); // sẽ in ra: 10
+
+    // Hàm trả về một hàm khác
+    Function applyMultiplier(num multiplier) {
+        // trả về hàm ẩn danh
+        return (num value) {
+            return value * multiplier;
+        };
+    }
+
+    // triple vẫn là 1 function trả về giá trị value * multiplier của hàm ẩn danh phía trên
+    final triple = applyMultiplier(3);
+    print(triple(6)); // sẽ in ra: 18
+
+    // doubleIt vẫn là 1 function trả về giá trị value * multiplier của hàm ẩn danh phía trên
+    final doubleIt = applyMultiplier(2);
+    print(doubleIt(3)); // sẽ in ra: 6
+}
+Nguồn tham khảo
+
+Bài viết được tham khảo từ tài liệu của đồng nghiệp
+Series và Dart và Flutter của fxstudio
+">
 
 
 <script type="application/ld+json">
@@ -96,7 +355,7 @@
   "@type": "BlogPosting",
   "headline": "Hàm trong Dart",
   "name": "Hàm trong Dart",
-  "description": "Đây là một khái niệm đã khá quen thuộc với anh em học IT, đơn giản hàm là một khối lệnh thực hiện một tác vụ, khối lệnh này được dùng nhiều lần nên gom chúng tại thành một hàm Trong Dart mọi thứ đều là đối tượng nên hàm cũng vậy, tức là bạn có thể kế thừa hàm. void main() { // Gọi hàm printMyName(); helloPersonAndPet(\u0026#39;Nick\u0026#39;, \u0026#39;Boo\u0026#39;); var hello = sayHello(\u0026#34;Duc\u0026#34;); print(hello); } void printMyName() { print(\u0026#39;Phan Anh Duc\u0026#39;); } // Hàm trả về giá trị String sayHello(String name) { print(\u0026#34;xin chao $name\u0026#34;); } void helloPersonAndPet(String person, String pet) { print(\u0026#39;Hello, $person, and your furry friend, $pet!",
+  "description": " Đây là một khái niệm đã khá quen thuộc với anh em học IT, đơn giản hàm là một khối lệnh thực hiện một tác vụ, khối lệnh này được dùng nhiều lần nên gom chúng tại thành một hàm Trong Dart mọi thứ đều là đối tượng nên hàm cũng vậy, tức là bạn có thể kế thừa hàm. void main() { // Gọi hàm printMyName(); helloPersonAndPet(\u0026#39;Nick\u0026#39;, \u0026#39;Boo\u0026#39;); var hello = sayHello(\u0026#34;Duc\u0026#34;); print(hello); } void printMyName() { print(\u0026#39;Phan Anh Duc\u0026#39;); } // Hàm trả về giá trị String sayHello(String name) { print(\u0026#34;xin chao $name\u0026#34;); } void helloPersonAndPet(String person, String pet) { print(\u0026#39;Hello, $person, and your furry friend, $pet!\u0026#39;); } Optional Parameters Tham số có thể có truyền vào hoặc không truyền vào được khai trong ngoặc vuông [] với dấu ? và có kiểu dữ liệu là optinal Bạn cũng có thể cung cấp giá trị mặc định cho thêm số optional void main() { var optionalParameters = fullName(\u0026#34;Mr\u0026#34;, \u0026#34;Phan\u0026#34;, \u0026#34;Duc\u0026#34;); var optionalParametersDefault = sayFullName(\u0026#34;Phan\u0026#34;, \u0026#34;Duc\u0026#34;); print(optionalParameters); // In ra: Mr Phan Duc print(optionalParametersDefault); // In ra: Hello Phan Duc } String fullName(String title, [String? first, String? last]) { // first và last ở đây có kiểu là optional if (first != null \u0026amp;\u0026amp; last != null) { return \u0026#39;$title $first $last\u0026#39;; } else { return \u0026#39;$title\u0026#39;; } } String sayFullName(String first, String last, [String title = \u0026#34;Hello\u0026#34;]) { return \u0026#39;$title $first $last\u0026#39;; } Naming và named parameters Naming và named về cơ bản là giống nhau nhưng named có thêm từ khóa required và khi có required thì tham số bắt buộc phải truyền vào Để khai báo thì dúng ta đặt tên biến trong {} Có thể có optional và giá trị mặc định void main() { // Khi gọi hàm sẽ có thêm label min và max var checkBetween = withinTolerance(5, min: 0, max: 10); print(checkBetween); // sẽ in ra: true var checkBetween2 = withinTolerance2(6, min: 0, max: 5); print(checkBetween2); // sẽ in ra: false } bool withinTolerance(int value, {int min = 0, int max = 10}) { return min \u0026lt;= value \u0026amp;\u0026amp; value \u0026lt;= max; } // named bool withinTolerance2(int value, {required int min, required int max}) { return min \u0026lt;= value \u0026amp;\u0026amp; value \u0026lt;= max; } Function cũng có thể trả về dạng dữ liệu dynamic với cách khai báo giống với var void main() { var dynamicNumber = compliment(10); var dynamicString = compliment(\u0026#34;Hello\u0026#34;); print(dynamicNumber); // sẽ in ra: 10 is a very nice int print(dynamicString); // sẽ in ra: Hello is a very nice String } compliment(number) { var type = number.runtimeType; return \u0026#39;$number is a very nice $type\u0026#39;; } Ngoài ra các bạn còn có thể bỏ luôn tên hàm và khai báo như hàm một kiểu dữ liệu (Anonymous functions). Các bạn cũng có thể viết một function trả về một function khác với cấu trúc: Function functionName(params) { return (params) } Nếu fuction chỉ có 1 dòng thì return trong Dart cũng có thể việt ngắn gọn lại bằng =\u0026gt; void main () { // Hàm ẩn danh final multiply = (int a, int b) { return a * b; }; print(multiply(2, 3)); // sẽ in ra: 6 // Viết ngắn gọn hơn final multiply2 = (int a, int b) =\u0026gt; a * b; print(multiply2(2, 5)); // sẽ in ra: 10 // Hàm trả về một hàm khác Function applyMultiplier(num multiplier) { // trả về hàm ẩn danh return (num value) { return value * multiplier; }; } // triple vẫn là 1 function trả về giá trị value * multiplier của hàm ẩn danh phía trên final triple = applyMultiplier(3); print(triple(6)); // sẽ in ra: 18 // doubleIt vẫn là 1 function trả về giá trị value * multiplier của hàm ẩn danh phía trên final doubleIt = applyMultiplier(2); print(doubleIt(3)); // sẽ in ra: 6 } Nguồn tham khảo Bài viết được tham khảo từ tài liệu của đồng nghiệp Series và Dart và Flutter của fxstudio ",
   "keywords": [
     
   ],
@@ -138,7 +397,7 @@
         <div class="logo">
             <a href="https://ducpa.id.vn/" accesskey="h" title="Hi, I&#39;m Phan Anh Duc 👋 (Alt + H)">Hi, I&#39;m Phan Anh Duc 👋</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -162,23 +421,13 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://ducpa.id.vn/categories/basic-wordpress/" title="Basic Wordpress">
-                    <span>Basic Wordpress</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://ducpa.id.vn/categories/dart-fundamentals/" title="Dart Fundamentals">
-                    <span>Dart Fundamentals</span>
-                </a>
-            </li>
-            <li>
                 <a href="https://ducpa.id.vn/categories/flutter/" title="Flutter">
                     <span>Flutter</span>
                 </a>
             </li>
             <li>
-                <a href="https://ducpa.id.vn/categories/ios-development-notes/" title="iOS Development Notes">
-                    <span>iOS Development Notes</span>
+                <a href="https://ducpa.id.vn/categories/ios-development-notes/" title="iOS">
+                    <span>iOS</span>
                 </a>
             </li>
         </ul>
@@ -339,13 +588,12 @@
     </main>
     
 <footer class="footer">
-    
+        <span>&copy; 2025 <a href="https://ducpa.id.vn/">Hi, I&#39;m Phan Anh Duc 👋</a></span> · 
+
     <span>
-        &copy;<script>document.write(new Date().getFullYear())</script> ducpa | Học, học nữa, học mãi.
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-        <br>
     </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
