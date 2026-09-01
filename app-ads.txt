@@ -1,0 +1,5 @@
+# Tệp app-ads.txt dành cho Google AdMob
+# Thay thế pub-XXXXXXXXXXXXXXXX bằng mã Nhà xuất bản (Publisher ID) thật của bạn từ tài khoản Google AdMob
+# Tìm Publisher ID tại: AdMob Console ➔ Cài đặt (Settings) ➔ Thông tin tài khoản (Account information) ➔ Mã nhà xuất bản (pub-...)
+
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
