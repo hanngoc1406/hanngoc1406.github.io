@@ -1,0 +1,118 @@
+{
+  "version": 20260902,
+  "solar_holidays": [
+    {"day": 1, "month": 1, "name_vi": "Tết Dương Lịch", "name_en": "New Year's Day", "name_zh": "元旦", "is_off": true},
+    {"day": 9, "month": 1, "name_vi": "Ngày truyền thống Học sinh, Sinh viên Việt Nam", "name_en": "Vietnamese Students' Day", "name_zh": "越南大中学生传统日", "is_off": false},
+    {"day": 3, "month": 2, "name_vi": "Ngày thành lập Đảng Cộng sản Việt Nam", "name_en": "Founding Day of the Communist Party of Vietnam", "name_zh": "越南共产党成立日", "is_off": false},
+    {"day": 14, "month": 2, "name_vi": "Lễ Tình Nhân (Valentine)", "name_en": "Valentine's Day", "name_zh": "情人节", "is_off": false},
+    {"day": 27, "month": 2, "name_vi": "Ngày Thầy thuốc Việt Nam", "name_en": "Vietnam Doctors' Day", "name_zh": "越南医生节", "is_off": false},
+    {"day": 8, "month": 3, "name_vi": "Quốc tế Phụ nữ", "name_en": "International Women's Day", "name_zh": "国际妇女节", "is_off": false},
+    {"day": 26, "month": 3, "name_vi": "Ngày thành lập Đoàn TNCS Hồ Chí Minh", "name_en": "Ho Chi Minh Communist Youth Union Founding Day", "name_zh": "胡志明共产主义青年团成立日", "is_off": false},
+    {"day": 30, "month": 4, "name_vi": "Ngày Giải phóng miền Nam", "name_en": "Reunification Day", "name_zh": "南方解放日", "is_off": true},
+    {"day": 1, "month": 5, "name_vi": "Quốc tế Lao động", "name_en": "International Workers' Day", "name_zh": "国际劳动节", "is_off": true},
+    {"day": 7, "month": 5, "name_vi": "Chiến thắng Điện Biên Phủ", "name_en": "Dien Bien Phu Victory", "name_zh": "奠边府大捷", "is_off": false},
+    {"day": 19, "month": 5, "name_vi": "Kỷ niệm ngày sinh Chủ tịch Hồ Chí Minh", "name_en": "President Ho Chi Minh's Birthday", "name_zh": "胡志明主席诞辰纪念日", "is_off": false},
+    {"day": 1, "month": 6, "name_vi": "Quốc tế Thiếu nhi", "name_en": "International Children's Day", "name_zh": "国际儿童节", "is_off": false},
+    {"day": 28, "month": 6, "name_vi": "Ngày Gia đình Việt Nam", "name_en": "Vietnamese Family Day", "name_zh": "越南家庭日", "is_off": false},
+    {"day": 27, "month": 7, "name_vi": "Ngày Thương binh - Liệt sĩ", "name_en": "War Invalids and Martyrs Day", "name_zh": "荣军烈士日", "is_off": false},
+    {"day": 19, "month": 8, "name_vi": "Ngày Cách mạng Tháng Tám", "name_en": "August Revolution Day", "name_zh": "八月革命节", "is_off": false},
+    {"day": 19, "month": 8, "name_vi": "Ngày truyền thống Công an nhân dân", "name_en": "People's Public Security Day", "name_zh": "越南人民公安传统日", "is_off": false},
+    {"day": 2, "month": 9, "name_vi": "Quốc khánh Việt Nam", "name_en": "National Day of Vietnam", "name_zh": "越南国庆节", "is_off": true},
+    {"day": 10, "month": 10, "name_vi": "Ngày Giải phóng Thủ đô", "name_en": "Capital Liberation Day", "name_zh": "首都解放日", "is_off": false},
+    {"day": 20, "month": 10, "name_vi": "Ngày Phụ nữ Việt Nam", "name_en": "Vietnamese Women's Day", "name_zh": "越南妇女节", "is_off": false},
+    {"day": 20, "month": 11, "name_vi": "Ngày Nhà giáo Việt Nam", "name_en": "Vietnamese Teachers' Day", "name_zh": "越南教师节", "is_off": false},
+    {"day": 24, "month": 11, "name_vi": "Ngày Văn hóa Việt Nam", "name_en": "Vietnam Cultural Heritage Day", "name_zh": "越南文化日", "is_off": true},
+    {"day": 22, "month": 12, "name_vi": "Ngày thành lập QĐND Việt Nam", "name_en": "Vietnam People's Army Founding Day", "name_zh": "越南人民军建军节", "is_off": false},
+    {"day": 24, "month": 12, "name_vi": "Lễ Giáng Sinh (Noel)", "name_en": "Christmas Eve", "name_zh": "平安夜", "is_off": false},
+    {"day": 25, "month": 12, "name_vi": "Lễ Giáng Sinh", "name_en": "Christmas Day", "name_zh": "圣诞节", "is_off": false}
+  ],
+  "lunar_holidays": [
+    {"day": 1, "month": 1, "name_vi": "Mùng 1 Tết Nguyên Đán", "name_en": "Tet Day 1 (Lunar New Year)", "name_zh": "农历正月初一 (大年初一)", "is_off": true},
+    {"day": 2, "month": 1, "name_vi": "Mùng 2 Tết Nguyên Đán", "name_en": "Tet Day 2", "name_zh": "农历正月初二 (大年初二)", "is_off": true},
+    {"day": 3, "month": 1, "name_vi": "Mùng 3 Tết Nguyên Đán", "name_en": "Tet Day 3", "name_zh": "农历正月初三 (大年初三)", "is_off": true},
+    {"day": 15, "month": 1, "name_vi": "Tết Nguyên Tiêu (Rằm tháng Giêng)", "name_en": "Lantern Festival", "name_zh": "元宵节 (上元节)", "is_off": false},
+    {"day": 3, "month": 3, "name_vi": "Tết Hàn Thực (Bánh trôi bánh chay)", "name_en": "Cold Food Festival", "name_zh": "寒食节", "is_off": false},
+    {"day": 10, "month": 3, "name_vi": "Giỗ Tổ Hùng Vương", "name_en": "Hung Kings Commemoration Day", "name_zh": "雄王祭", "is_off": true},
+    {"day": 15, "month": 4, "name_vi": "Đại lễ Phật Đản", "name_en": "Vesak (Buddha's Birthday)", "name_zh": "佛诞节 (卫塞节)", "is_off": false},
+    {"day": 5, "month": 5, "name_vi": "Tết Đoan Ngọ (Diệt sâu bọ)", "name_en": "Dragon Boat Festival", "name_zh": "端午节", "is_off": false},
+    {"day": 15, "month": 7, "name_vi": "Lễ Vu Lan (Báo hiếu / Rằm tháng 7)", "name_en": "Ghost Festival / Vu Lan Day", "name_zh": "中元节 (盂兰盆节)", "is_off": false},
+    {"day": 15, "month": 8, "name_vi": "Tết Trung Thu", "name_en": "Mid-Autumn Festival", "name_zh": "中秋节", "is_off": false},
+    {"day": 23, "month": 12, "name_vi": "Tết Ông Công Ông Táo", "name_en": "Kitchen Gods' Day", "name_zh": "送灶神 (小年)", "is_off": false},
+    {"day": 29, "month": 12, "name_vi": "Tất Niên 29 Tết", "name_en": "Year-End Eve", "name_zh": "除夕前夜", "is_off": false},
+    {"day": 30, "month": 12, "name_vi": "Đêm Giao Thừa (30 Tết)", "name_en": "New Year's Eve (Giao Thua)", "name_zh": "除夕夜 (除夕)", "is_off": false}
+  ],
+  "official_vacation_schedules": {
+    "2024": [
+      {
+        "id": "tet_2024",
+        "title_vi": "Kỳ nghỉ Tết Nguyên Đán Giáp Thìn 2024 (7 ngày)",
+        "title_en": "Lunar New Year Vacation 2024 (7 days)",
+        "title_zh": "2024年春节假期 (7天)",
+        "start_solar": "2024-02-08",
+        "end_solar": "2024-02-14",
+        "is_official": true
+      },
+      {
+        "id": "quockhanh_2024",
+        "title_vi": "Kỳ nghỉ Lễ Quốc Khánh 2024 (4 ngày)",
+        "title_en": "National Day Holiday 2024 (4 days)",
+        "title_zh": "2024年国庆节假期 (4天)",
+        "start_solar": "2024-08-31",
+        "end_solar": "2024-09-03",
+        "is_official": true
+      }
+    ],
+    "2025": [
+      {
+        "id": "tet_2025",
+        "title_vi": "Kỳ nghỉ Tết Nguyên Đán Ất Tỵ 2025 (9 ngày)",
+        "title_en": "Lunar New Year Vacation 2025 (9 days)",
+        "title_zh": "2025年春节假期 (9天)",
+        "start_solar": "2025-01-25",
+        "end_solar": "2025-02-02",
+        "is_official": true
+      },
+      {
+        "id": "quockhanh_2025",
+        "title_vi": "Kỳ nghỉ Lễ Quốc Khánh 2025 (4 ngày)",
+        "title_en": "National Day Holiday 2025 (4 days)",
+        "title_zh": "2025年国庆节假期 (4天)",
+        "start_solar": "2025-08-30",
+        "end_solar": "2025-09-02",
+        "is_official": true
+      }
+    ],
+    "2026": [
+      {
+        "id": "tet_2026",
+        "title_vi": "Kỳ nghỉ Tết Nguyên Đán Bính Ngọ 2026 (9 ngày)",
+        "title_en": "Lunar New Year Vacation 2026 (9 days)",
+        "title_zh": "2026年春节假期 (9天)",
+        "start_solar": "2026-02-14",
+        "end_solar": "2026-02-22",
+        "is_official": true
+      },
+      {
+        "id": "quockhanh_2026",
+        "title_vi": "Kỳ nghỉ Lễ Quốc Khánh 2026 (4 ngày)",
+        "title_en": "National Day Holiday 2026 (4 days)",
+        "title_zh": "2026年国庆节假期 (4天)",
+        "start_solar": "2026-08-30",
+        "end_solar": "2026-09-02",
+        "is_official": true
+      }
+    ],
+    "2027": [
+      {
+        "id": "tet_2027",
+        "title_vi": "Kỳ nghỉ Tết Nguyên Đán Đinh Mùi 2027",
+        "title_en": "Lunar New Year Vacation 2027",
+        "title_zh": "2027年春节假期",
+        "start_solar": "2027-02-05",
+        "end_solar": "2027-02-12",
+        "is_official": true
+      }
+    ]
+  }
+}
+
