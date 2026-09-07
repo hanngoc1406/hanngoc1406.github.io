@@ -1,5 +1,5 @@
 {
-  "version": 20260902,
+  "version": 20260906,
   "solar_holidays": [
     {"day": 1, "month": 1, "name_vi": "Tết Dương Lịch", "name_en": "New Year's Day", "name_zh": "元旦", "is_off": true},
     {"day": 9, "month": 1, "name_vi": "Ngày truyền thống Học sinh, Sinh viên Việt Nam", "name_en": "Vietnamese Students' Day", "name_zh": "越南大中学生传统日", "is_off": false},
