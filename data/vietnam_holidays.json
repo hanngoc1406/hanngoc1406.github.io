@@ -106,9 +106,9 @@
         "title_vi": "Kỳ nghỉ lễ ngày văn hoá Việt Nam 2026",
         "title_en": "Vietnam Cultural Day Holiday 2026",
         "title_zh": "2026年越南文化节假期",
-        "start_solar": "2026-11-21",
+        "start_solar": "2026-11-24",
         "end_solar": "2026-11-24",
-        "is_official": false
+        "is_official": true
       }
     ],
     "2027": [
@@ -117,8 +117,8 @@
         "title_vi": "Kỳ nghỉ Tết Nguyên Đán Đinh Mùi 2027",
         "title_en": "Lunar New Year Vacation 2027",
         "title_zh": "2027年春节假期",
-        "start_solar": "2027-02-05",
-        "end_solar": "2027-02-12",
+        "start_solar": "2027-02-04",
+        "end_solar": "2027-02-10",
         "is_official": true
       }
     ]
