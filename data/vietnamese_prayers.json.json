@@ -1,0 +1,371 @@
+{
+  "version": 20261016,
+  "sources": [
+    "Văn Khấn Cổ Truyền Việt Nam – NXB Hồng Đức",
+    "Phong Tục Thờ Cúng Cổ Truyền Việt Nam – NXB Văn Hóa Thông Tin",
+    "Nếp Cũ: Tín Ngưỡng Dân Gian Việt Nam – Học giả Toan Ánh",
+    "Nghi Lễ Cúng Gia Tiên Toàn Tập – Viện Nghiên Cứu Hán Nôm biên soạn",
+    "Văn Khấn Nôm Cổ Truyền – van_khan_nom.pdf"
+  ],
+  "categories": [
+    {
+      "id": "gio_chap",
+      "name_vi": "Giỗ Chạp & Tang Lễ Tổ Tiên",
+      "name_en": "Ancestor Commemoration & Memorials",
+      "icon_name": "family_restroom_rounded",
+      "color_hex": "#C0392B",
+      "description": "Các bài văn khấn giỗ thường (Cát kỵ), giỗ đầu (Tiểu tường), giỗ hết (Đại tường), tiên thường, chúc thực, thành phục, cải cát dời mộ và cầu cúng tổ tiên."
+    },
+    {
+      "id": "le_tet",
+      "name_vi": "Lễ Tiết & Tết Cổ Truyền",
+      "name_en": "Traditional Lunar Festivals",
+      "icon_name": "celebration_rounded",
+      "color_hex": "#E67E22",
+      "description": "Văn khấn Tết Nguyên Đán, Tất niên, Giao thừa, Tạ năm mới (Hóa vàng), Táo Quân, Tết Nguyên Tiêu, Hàn Thực, Đoan Ngọ, Vu Lan..."
+    },
+    {
+      "id": "mung1_ram",
+      "name_vi": "Mùng 1 & Ngày Rằm (Sóc Vọng)",
+      "name_en": "New Moon & Full Moon Prayers",
+      "icon_name": "brightness_medium_rounded",
+      "color_hex": "#D35400",
+      "description": "Văn khấn Thần Linh và Gia Tiên vào ngày sóc (Mùng 1) và vọng (Ngày Rằm 15) hàng tháng."
+    },
+    {
+      "id": "kinh_doanh_xay_dung",
+      "name_vi": "Nhập Trạch, Động Thổ & Địa Mạch",
+      "name_en": "Business, Construction & Housewarming",
+      "icon_name": "storefront_rounded",
+      "color_hex": "#27AE60",
+      "description": "Nghi lễ cúng nhập trạch nhà mới, tân gia, bồi hoàn địa mạch, động thổ, cất nóc, cúng Thần Tài - Thổ Địa và Táo Quân."
+    },
+    {
+      "id": "gia_dinh",
+      "name_vi": "Gia Đình, Nghề Nghiệp & Đời Sống",
+      "name_en": "Family Milestones & Life Events",
+      "icon_name": "favorite_rounded",
+      "color_hex": "#8E44AD",
+      "description": "Văn khấn cúng Thánh Sư (ông tổ nghề), cúng mụ đầy tháng thôi nôi, cầu thi cử, mừng thọ."
+    },
+    {
+      "id": "chua_den",
+      "name_vi": "Lễ Chùa, Đền, Miếu & Phủ",
+      "name_en": "Temple & Pagoda Pilgrimage",
+      "icon_name": "temple_buddhist_rounded",
+      "color_hex": "#F39C12",
+      "description": "Văn khấn khi đi lễ Phật tại Chùa, Đức Thánh Hiền, Ban Công Đồng, Tứ Phủ, Đền Bà Chúa Kho, Đức Thánh Trần, Thành Hoàng làng."
+    },
+    {
+      "id": "dang_sao_giai_han",
+      "name_vi": "Dâng Sao Giải Hạn & Cầu An",
+      "name_en": "Star-Pleading & Atonement Rituals",
+      "icon_name": "stars_rounded",
+      "color_hex": "#2980B9",
+      "description": "Bài khấn dâng sao giải hạn Cửu Diệu Tinh Quân (La Hầu, Kế Đô, Thái Bạch, Vân Hán, Thủy Diệu, Mộc Đức, Thái Dương, Thái Âm, Thổ Tú) dịp Tết Nguyên Tiêu."
+    }
+  ],
+  "prayers": [
+    {
+      "id": "gio_thuong_cat_ky",
+      "category_id": "gio_chap",
+      "title_vi": "Văn Khấn Cúng Giỗ Thường (Cát Kỵ)",
+      "title_en": "Regular Memorial Anniversary Prayer (Cat Ky)",
+      "suitable_tags": [
+        "gio",
+        "anniversary",
+        "gia_tien"
+      ],
+      "significance": "Giỗ thường (còn gọi là Cát kỵ) là ngày giỗ từ năm thứ ba trở đi sau khi người mất qua đời. Đây là dịp để con cháu trong dòng tộc tưởng nhớ công ơn sinh thành, dưỡng dục của tổ tiên, ông bà, cha mẹ; thắt chặt tình đoàn kết huyết thống gia đình.",
+      "offerings": "Mâm cỗ mặn hoặc chay tùy theo gia cảnh, bánh chưng/xôi gấc, gà luộc nguyên con ngậm hoa hồng, đĩa hoa quả ngũ quả, hoa tươi thơm (hoa huệ, hoa cúc), rượu trắng, trầu cau tươi, vàng mã truyền thống, đèn dầu hoặc nến.",
+      "template": "Nam mô A Di Đà Phật! (3 lần kèm 3 lạy)\n\n- Con lạy chín phương Trời, mười phương Chư Phật, Chư Phật mười phương.\n- Con kính lạy Hoàng thiên Hậu Thổ chư vị Tôn thần.\n- Con kính lạy ngài Đông Trù Tư mệnh Táo phủ Thần quân.\n- Con kính lạy ngài Thần linh, Thổ địa cai quản trong xứ này.\n- Con kính lạy chư gia Cao Tằng Tổ Khảo, Cao Tằng Tổ Tỷ, Tiên linh nội ngoại họ {dong_ho}.\n\nHôm nay là ngày {ngay_am} tháng {thang_am} năm {nam_am} (nhằm ngày {ngay_duong} tháng {thang_duong} năm {nam_duong}).\nTín chủ con là: {ho_ten_tin_chu}, sinh năm {nam_sinh}.\nCùng toàn thể gia đình cư ngụ tại: {dia_chi_tin_chu}.\n\nNhân ngày Cát kỵ (giỗ thường) của: Cố {quan_he} {ten_nguoi_mat}, chân linh trần thế ngày {ngay_mat_neu_co}.\n\nChúng con với tấm lòng hiếu kính, thiết lập linh sàng, dâng lên trước án hương hoa, trà quả, kim ngân, trầu cau, thanh kê, lễ vật, kính cẩn dâng lên trước án.\n\nKính mời chân linh Cố {quan_he} {ten_nguoi_mat} cùng chư vị Tiên linh nội ngoại, Tiền chủ Hậu chủ ngự tại xứ này, đồng lai hâm hưởng chứng giám lòng thành của chúng con.\n\nCúi xin phù hộ độ trì cho gia đình chúng con: Già trẻ bình an, bốn mùa không hạn ách, tám tiết thanh nhàn, gia đạo hưng long, công danh toại ý, sở cầu như ý, sở nguyện tòng tâm.\n\nLòng thành khẩn cầu, lễ bạc tâm thành, cúi xin chứng giám!\n\nNam mô A Di Đà Phật! (3 lần kèm 3 lạy)",
+      "notes": "Khi cúng giỗ, gia chủ cần tắm gội sạch sẽ, y phục chỉnh tề, giữ tâm thanh tịnh. Đọc bài khấn với âm lượng vừa phải, rõ ràng từng từ, thể hiện lòng thành kính sâu sắc."
+    },
+    {
+      "id": "gio_dau_tieu_tuong",
+      "category_id": "gio_chap",
+      "title_vi": "Văn Khấn Lễ Giỗ Đầu (Tiểu Tường)",
+      "title_en": "First Memorial Anniversary Prayer (Tieu Tuong)",
+      "suitable_tags": [
+        "gio",
+        "anniversary",
+        "tang_le"
+      ],
+      "significance": "Giỗ đầu (gọi là Lễ Tiểu Tường) diễn ra tròn 1 năm sau ngày mất. Lúc này tang quyến vẫn đang trong giai đoạn thọ tang sâu sắc (đại tang), tâm trạng còn nhiều thương xót, lễ nghi mang tính trang nghiêm, xúc động.",
+      "offerings": "Mâm cơm cúng trang nghiêm thanh tịnh, bánh xôi, hoa quả tươi, đèn nến, tiền vàng mã, y phục mã biếu gửi người đã khuất theo phong tục.",
+      "template": "Nam mô A Di Đà Phật! (3 lần kèm 3 lạy)\n\n- Con kính lạy chín phương Trời, mười phương Chư Phật, Chư Phật mười phương.\n- Con kính lạy Hoàng thiên Hậu Thổ chư vị Tôn thần cai quản bản xứ.\n- Con kính lạy chư vị Thần linh, Bản gia Tiền chủ, Hậu chủ ngự tại nơi này.\n- Con kính lạy Tổ Tiên nội ngoại chư vị Hương linh.\n\nHôm nay là ngày {ngay_am} tháng {thang_am} năm {nam_am}.\nTín chủ con là: {ho_ten_tin_chu}.\nNgụ tại: {dia_chi_tin_chu}.\n\nNay nhân ngày Lễ Tiểu Tường (Giỗ đầu) của: {quan_he} {ten_nguoi_mat}.\nTạ thế ngày {ngay_mat_neu_co}.\n\nThan ôi! Ngày này năm trước, cách trở cõi âm dương. Thời gian thoi đưa, thấm thoắt một năm đã trôi qua mà nỗi đau xót xa vẫn chưa nguôi ngoai. Đội ơn dưỡng dục cù lao, biển rộng non cao chưa đền đáp.\n\nNay trước bàn thờ hương khói, chúng con kính dâng lễ vật, cơm canh thanh tịnh, hoa tươi quả ngọt, kim ngân trầu cau, cúi xin giáng phó trước linh sàng, hâm hưởng lễ mọn.\n\nKính xin chân linh phù hộ độ trì cho cháu con vạn sự cát tường, gia đạo thuận hòa, hướng thiện lập đức.\n\nNam mô A Di Đà Phật! (3 lần kèm 3 lạy)",
+      "notes": "Lễ Tiểu Tường vẫn thuộc thời kỳ tang phục, lễ cúng nên giữ trang nghiêm, tĩnh lặng, tránh cười đùa ồn ào."
+    },
+    {
+      "id": "gio_het_dai_tuong",
+      "category_id": "gio_chap",
+      "title_vi": "Văn Khấn Ngày Giỗ Hết (Lễ Đại Tường)",
+      "title_en": "Final Memorial Anniversary Prayer (Dai Tuong)",
+      "suitable_tags": [
+        "gio",
+        "anniversary",
+        "tang_le",
+        "van_khan_nom"
+      ],
+      "significance": "Trích từ nguồn van_khan_nom.pdf: Lễ Giỗ Hết (Đại Tường) là ngày giỗ vào 2 năm 3 tháng sau ngày mất. Đây là giỗ quan trọng đánh dấu mốc gia đình bỏ tang phục (hết tang), người quá cố trở thành Hương linh phối thờ cùng Gia tiên.",
+      "offerings": "Giỗ Hết thường được tổ chức long trọng với: vàng mã, hương, hoa, phẩm oản, trái cây theo mùa, cùng mâm lễ mặn đầy đủ các món ăn từ thịt lợn, tôm, cua, xôi, gà...",
+      "template": "Nam mô A Di Đà Phật! (3 lần kèm 3 lạy)\n\n- Con lạy chín phương Trời, mười phương Chư Phật, Chư Phật mười phương.\n- Con kính lạy Đức Đương cảnh Thành hoàng chư vị Đại Vương.\n- Con kính lạy ngài Đông Trù Tư mệnh Táo phủ Thần quân.\n- Con kính lạy các ngài Thần linh, Thổ địa cai quản trong xứ này.\n- Con kính lạy chư gia tiên Cao Tằng Tổ Khảo, Cao Tằng Tổ Tỷ nội ngoại họ {dong_ho}.\n\nHôm nay là ngày {ngay_am} tháng {thang_am} năm {nam_am}.\nTín chủ con là: {ho_ten_tin_chu}.\nNgụ tại: {dia_chi_tin_chu}.\n\nNhân ngày mai là ngày Giỗ Hết (Lễ Đại Tường) của: {quan_he} {ten_nguoi_mat}.\nTín chủ con cùng toàn thể gia quyến tuân theo nghi lễ, sửa biện hương hoa lễ vật dâng cúng các vị Tôn thần và Gia tiên.\n\nCúi xin các vị Bản gia, Thổ Công, Táo phủ Thần quân, Ngũ phương, Long mạch và các vị Thần linh hiển linh chứng giám, thụ hưởng lễ vật, phù hộ cho toàn gia chúng con an ninh khang thái, vạn sự tốt lành.\n\nNam mô A Di Đà Phật! (3 lần kèm 3 lạy)",
+      "notes": "Sau ngày Giỗ Hết, gia đình làm lễ cải cát (sang mộ) cho người quá cố và từ năm thứ 3 trở đi chuyển sang cúng Giỗ Thường (Cát Kỵ)."
+    },
+    {
+      "id": "tien_thuong_ngay_truoc_gio",
+      "category_id": "gio_chap",
+      "title_vi": "Văn Khấn Gia Tiên Ngày Tiên Thường (Cúng Trước Ngày Giỗ)",
+      "title_en": "Pre-Anniversary Eve Prayer (Tien Thuong)",
+      "suitable_tags": [
+        "gio",
+        "tien_thuong",
+        "gia_tien",
+        "van_khan_nom"
+      ],
+      "significance": "Trích từ nguồn van_khan_nom.pdf: Ngày Tiên Thường là ngày ngay trước chính ngày giỗ (ngày cúng tiên). Gia chủ làm lễ cáo thần linh thổ địa và mời gia tiên tổ tiên về ngự linh sàng chuẩn bị thụ hưởng chính kỵ ngày hôm sau.",
+      "offerings": "Hương hoa, trà quả, trầu cau, đĩa xôi gà luộc, trầu rượu, tiền vàng mã dâng lên bàn thờ gia tiên.",
+      "template": "Nam mô A Di Đà Phật! (3 lần kèm 3 lạy)\n\n- Con lạy chín phương Trời, mười phương Chư Phật, Chư Phật mười phương.\n- Con kính lạy Đức Hoàng Thiên Hậu Thổ chư vị Tôn thần.\n- Con kính lạy ngài Đông Trù Tư mệnh Táo phủ Thần quân.\n- Con kính lạy các ngài Thần linh, Thổ địa cai quản trong xứ này.\n- Con kính lạy Tổ Tiên nội ngoại họ {dong_ho}.\n\nHôm nay là ngày {ngay_am} tháng {thang_am} năm {nam_am}.\nNgày trước giỗ (Tiên Thường) nhân chính kỵ ngày mai của: {quan_he} {ten_nguoi_mat}.\n\nTín chủ con là: {ho_ten_tin_chu}.\nNgụ tại: {dia_chi_tin_chu}.\n\nChúng con cùng toàn thể gia quyến tuân theo nghi lễ, thành tâm sắm lễ, quả cau lá trầu, hương hoa trà quả, đốt nén tâm hương dâng trước án, kính cẩn tâu trình.\n\nKính thỉnh các Tiên linh, Gia tiên chúng con và những vong hồn nội tộc được thờ phụng cùng về hâm hưởng.\nChúng con lễ bạc tâm thành, cúi xin được phù hộ độ trì an ninh khang thái.\n\nNam mô A Di Đà Phật! (3 lần kèm 3 lạy)",
+      "notes": "Lễ Tiên Thường thể hiện chu đáo tình cảm gia đình, chuẩn bị tươm tất trước khi vào lễ chính giỗ."
+    },
+    {
+      "id": "le_cai_cat_doi_mo",
+      "category_id": "gio_chap",
+      "title_vi": "Văn Khấn Lễ Cải Cát (Sang Mộ, Dời Mộ)",
+      "title_en": "Reburial and Tomb Relocation Prayer (Cai Cat)",
+      "suitable_tags": [
+        "cai_cat",
+        "doi_mo",
+        "long_mach",
+        "van_khan_nom"
+      ],
+      "significance": "Trích từ nguồn van_khan_nom.pdf: Nghi lễ Cải Cát (sang bốc mộ) giúp phần mộ người thân được yên định tốt lành, thể hiện lòng hiếu kính đạo hiếu con cháu đối với ông bà tổ tiên.",
+      "offerings": "Trầu cau, hương hoa, mâm lễ mặn, tiền vàng mã, Rượu trắng, hoa tươi 5 màu, cùng bài khấn tấu trình Sơn Thần, Long Mạch Thổ Thần nơi cũ và nơi mới.",
+      "template": "Nam mô A Di Đà Phật! (3 lần kèm 3 lạy)\n\n- Con lạy chín phương Trời, mười phương Chư Phật, Chư Phật mười phương.\n- Con lạy Đức Đương cảnh Thành hoàng chư vị Đại vương.\n- Con kính lạy ngài Đông Trù Tư mệnh Táo phủ Thần quân.\n- Con kính lạy chư gia tiên Cao Tằng Tổ Khảo, Cao Tằng Tổ Tỷ họ {dong_ho}.\n\nHôm nay là ngày {ngay_am} tháng {thang_am} năm {nam_am}.\nTại địa chỉ mộ phần: {dia_chi_mo}.\n\nKhấn trình trước mộ Hiển khảo (hoặc Tỷ): {ten_nguoi_mat}.\n\nThan rằng: Thương xót {quan_he} xưa, vắng xa trần thế.\nThác về, sống gửi, đất ba thước phải vùi chôn.\nPhách lạc hồn bay, hình trăm năm khó gìn để.\nTới nay, tìm đất tốt lành, sửa sang lại, cầu an hình thể.\nRày thân: Phần mộ dời xong, lễ Ngu kính tế.\nHồn thiêng xin hưởng, nguyện cầu vĩnh viễn âm phần.\nPhúc để di lưu, phù hộ vững bền miêu duệ.\n\nNam mô A Di Đà Phật! (3 lần kèm 3 lạy)",
+      "notes": "Theo phong tục trước và sau khi dời mộ bắt buộc phải làm lễ khấn trình với Long mạch, Sơn thần và Thổ thần nơi cũ cũng như nơi mới."
+    },
+    {
+      "id": "le_chung_that_tot_khoc",
+      "category_id": "gio_chap",
+      "title_vi": "Văn Khấn Lễ Chung Thất (49 Ngày) & Tốt Khốc (100 Ngày)",
+      "title_en": "49th & 100th Day Memorial Prayer",
+      "suitable_tags": [
+        "tang_le",
+        "49_ngay",
+        "100_ngay",
+        "van_khan_nom"
+      ],
+      "significance": "Trích từ nguồn van_khan_nom.pdf: Lễ Chung Thất (tròn 49 ngày) và Tốt Khốc (tròn 100 ngày) cầu siêu cho vong linh người quá cố sớm an nhiên siêu thoát về cõi an lành.",
+      "offerings": "Cơm chay/mặn thanh tịnh, bánh trái, hương hoa, đèn nến, trầu cau, áo mã biếu.",
+      "template": "Nam mô A Di Đà Phật! (3 lần kèm 3 lạy)\n\n- Con lạy chín phương Trời, mười phương Chư Phật, Chư Phật mười phương.\n\nHôm nay là ngày {ngay_am} tháng {thang_am} năm {nam_am}.\nNhân ngày tuần Chung Thất (hoặc Tốt Khốc) của: {quan_he} {ten_nguoi_mat}.\n\nTín chủ con là: {ho_ten_tin_chu}.\nCùng toàn thể con cháu nội ngoại ngụ tại: {dia_chi_tin_chu}.\n\nXin kính cẩn trình thưa rằng: Tình nghĩa sinh dưỡng biển rộng trời cao. Ngày qua tháng lại tính đến nay tuần Chung Thất (hoặc Tốt Khốc) tới kỳ. Lễ bạc tâm thành gọi là có nén nhang kính tế.\n\nXin mời Hiển: {ten_nguoi_mat} cùng các vị Tiên linh phụ thờ đồng về hâm hưởng.\nKính cáo Táo Quân, Thổ Công, Thánh sư chứng giám phù hộ toàn gia yên lành.\n\nNam mô A Di Đà Phật! (3 lần kèm 3 lạy)",
+      "notes": "Gia đình nên làm việc thiện tích đức, cầu kinh niệm Phật cầu siêu cho vong linh."
+    },
+    {
+      "id": "ong_cong_ong_tao_23_thang_chap",
+      "category_id": "le_tet",
+      "title_vi": "Văn Khấn Tết Ông Công Ông Táo (23 Tháng Chạp)",
+      "title_en": "Kitchen Gods Farewell Prayer (23rd of 12th Lunar Month)",
+      "suitable_tags": [
+        "tet",
+        "ong_tao",
+        "23_thang_chap"
+      ],
+      "significance": "Hằng năm vào ngày 23 tháng Chạp, các vị Táo Quân cưỡi cá chép bay về Trời để tâu bày việc làm ăn, thiện ác của gia đình trong suốt năm qua với Ngọc Hoàng Đại Đế.",
+      "offerings": "Mũ áo Táo quân (2 mũ cánh chuồn nam, 1 mũ không chuồn nữ), 3 con cá chép sống bơi trong chậu nước (hoặc cá chép giấy), mâm cỗ mặn, đĩa xôi gà luộc, hoa tươi quả ngọt, trầu cau, rượu trắng.",
+      "template": "Nam mô A Di Đà Phật! (3 lần kèm 3 lạy)\n\n- Con lạy chín phương Trời, mười phương Chư Phật, Chư Phật mười phương.\n- Con kính lạy ngài Đông Trù Tư Mệnh Táo Phủ Thần Quân.\n\nHôm nay là ngày 23 tháng Chạp năm {nam_am}.\nTín chủ chúng con là: {ho_ten_tin_chu}.\nCùng toàn thể gia đình ngụ tại: {dia_chi_tin_chu}.\n\nNhân ngày tiễn Táo Quân chầu trời, toàn gia chúng con thành tâm sắm sửa hương hoa trà quả, xiêm hài phẩm vật, mâm cỗ mặn nồng cẩn dâng trước án.\n\nCúi xin Thần quân giáng lâm án tọa, thụ hưởng lễ vật, ngự cưỡi cá chép phi thăng thiên đình, tâu bày lên Ngọc Hoàng Thượng Đế những việc tốt lành của gia chủ chúng con; xin xá bớt những điều lầm lỗi lỡ phạm trong năm qua.\n\nKính xin ngài phù hộ toàn gia mạnh khỏe, gia đạo an vui, ấm no thịnh vượng, đón chào xuân mới phúc lộc chan hòa.\n\nNam mô A Di Đà Phật! (3 lần kèm 3 lạy)",
+      "notes": "Lễ cúng tiễn Ông Táo nên tiến hành trước giờ Ngọ (12h trưa) ngày 23 tháng Chạp để kịp giờ Ngài về Thiên đình."
+    },
+    {
+      "id": "le_tat_nien_30_tet",
+      "category_id": "le_tet",
+      "title_vi": "Văn Khấn Lễ Tất Niên (Chiều 30 Tết)",
+      "title_en": "Year-End Ceremony Prayer (30th of 12th Lunar Month)",
+      "suitable_tags": [
+        "tet",
+        "tat_nien",
+        "30_tet",
+        "van_khan_nom"
+      ],
+      "significance": "Trích từ nguồn van_khan_nom.pdf: Lễ Tất Niên ghi nhận thời khắc năm cũ sắp qua, con cháu sắm lễ cúng tạ ơn Thần Linh và Gia Tiên đã che chở trong suốt năm qua, chuẩn bị đón mừng năm mới.",
+      "offerings": "Mâm cỗ Tất niên tươm tất đầy đủ các món Tết truyền thống (bánh chưng, gà luộc, canh măng, giò lụa), mâm ngũ quả, hoa tươi, trầu cau, rượu ngọt, tiền vàng mã.",
+      "template": "Nam mô A Di Đà Phật! (3 lần kèm 3 lạy)\n\n- Con lạy chín phương Trời, mười phương Chư Phật, Chư Phật mười phương.\n- Con kính lạy Hoàng Thiên Hậu Thổ chư vị Tôn thần.\n- Con kính lạy ngài Kim Niên Đương cai Thái tuế Chí đức Tôn thần.\n- Con kính lạy các ngài Bản cảnh Thành Hoàng Chư vị Đại Vương.\n- Con kính lạy các ngài Ngũ phương, Ngũ thổ Long Mạch, Tài thần, Bản gia Táo quân.\n- Con kính lạy Chư gia Cao Tằng Tổ Khảo, Cao Tằng Tổ Tỷ, Tiên linh nội ngoại họ {dong_ho}.\n\nHôm nay là ngày 30 tháng Chạp năm {nam_am}.\nTín chủ chúng con là: {ho_ten_tin_chu}.\nNgụ tại: {dia_chi_tin_chu}.\n\nNay nhân ngày Tất Niên năm cũ, chúng con thành tâm sắm lễ, hương hoa trà quả, mâm cỗ mặn nồng dâng trước án tiền tạ ơn Thần Linh và Gia Tiên.\nCúi xin chư vị chứng giám lòng thành, phù hộ toàn gia năm mới bình an, vạn sự như ý.\n\nNam mô A Di Đà Phật! (3 lần kèm 3 lạy)",
+      "notes": "Cúng Tất niên xong cả nhà quây quần bên mâm cơm đoàn viên ấm áp."
+    },
+    {
+      "id": "le_ta_nam_moi_hoa_vang",
+      "category_id": "le_tet",
+      "title_vi": "Văn Khấn Lễ Tạ Năm Mới (Lễ Hóa Vàng Mồng 3 Tết)",
+      "title_en": "Lunar New Year Closing Prayer (Hoa Vang)",
+      "suitable_tags": [
+        "tet",
+        "hoa_vang",
+        "mung_3_tet",
+        "van_khan_nom"
+      ],
+      "significance": "Trích từ nguồn van_khan_nom.pdf: Lễ Tạ năm mới (gọi là Lễ Hóa Vàng / Khai hạ) thường diễn ra vào mồng 3 hoặc mồng 7 Tết để tiễn Tiên linh tổ tiên trở về âm giới sau những ngày vui Tết cùng con cháu.",
+      "offerings": "Hương hoa, nước quả, mâm ngũ quả, trầu cau, rượu, đèn nến, bánh kẹo, mâm cỗ mặn xôi gà bánh chưng.",
+      "template": "Nam mô A Di Đà Phật! (3 lần kèm 3 lạy)\n\n- Con lạy chín phương Trời, mười phương Chư Phật, Chư Phật mười phương.\n- Con kính lạy Hoàng thiên Hậu Thổ chư vị Tôn thần.\n- Con kính lạy Ngài Đương niên, ngài Bản cảnh Thành hoàng, Thổ địa, Táo quân, Long Mạch.\n- Con kính lạy các cụ Tổ Khảo, Tổ Tỷ, nội ngoại Tiên linh họ {dong_ho}.\n\nHôm nay là ngày Mồng 3 tháng Giêng năm {nam_am}.\nTín chủ chúng con là: {ho_ten_tin_chu}.\nNgụ tại: {dia_chi_tin_chu}.\n\nTiệc xuân đã mãn, Nguyên Đán đã qua, nay xin thiêu hóa kim ngân, lễ tạ Tôn thần, rước tiễn Tiên linh trở về âm giới. Kính xin phù hộ độ trì cho con cháu đường đường bình an, gia đạo hưng long thịnh vượng.\n\nNam mô A Di Đà Phật! (3 lần kèm 3 lạy)",
+      "notes": "Khi hóa vàng cần hóa sớ/văn khấn trước rồi mới hóa tiền vàng mã."
+    },
+    {
+      "id": "dang_sao_giai_han_nguyen_tieu",
+      "category_id": "dang_sao_giai_han",
+      "title_vi": "Văn Khấn Dâng Sao Giải Hạn Ngày Tết Nguyên Tiêu (Rằm Tháng Giêng)",
+      "title_en": "Star-Pleading Atonement Prayer on First Full Moon",
+      "suitable_tags": [
+        "dang_sao",
+        "giai_han",
+        "ram_thang_gieng",
+        "van_khan_nom"
+      ],
+      "significance": "Trích từ nguồn van_khan_nom.pdf: Ông bà ta xưa quan niệm mỗi người mỗi năm có một ngôi sao chiếu mệnh (Thái Dương, Thái Âm, La Hầu, Kế Đô, Thái Bạch, Vân Hán, Thủy Diệu, Mộc Đức, Thổ Tú). Ngày Rằm tháng Giêng cúng dâng sao giải hạn cầu mong vạn sự bình an.",
+      "offerings": "Hương hoa, đăng nến (số lượng nến xếp theo từng sao), trầu cau, bài vị màu tương ứng ngũ hành của sao chiếu mệnh, mũ mã và 36 đồng tiền.",
+      "template": "Nam mô A Di Đà Phật! (3 lần kèm 3 lạy)\n\nHôm nay là ngày Rằm tháng Giêng năm {nam_am}.\nTín chủ con là: {ho_ten_tin_chu}.\nNgụ tại: {dia_chi_tin_chu}.\n\nChúng con thành tâm có lời kính mời:\nNhật cung Thái Dương Thiên Tử tinh quân,\nNam Tào Bắc Đẩu tinh quân,\nThái Bạch, Mộc Đức, Thủy Diệu, Vân Hán, La Hầu, Kế Đô tinh quân,\nNhị thập Bát Tú, Ngũ Hành tinh quân.\n\nGiáng lâm trước án, nghe lời mời cẩn tấu: Ngày rằm Nguyên Tiêu, theo lệ trần tục, tín chủ con thành tâm sắm lễ hương hoa trà quả dâng lên trước án, kính mời các vị lai lâm hâm hưởng, phù hộ cho toàn gia chúng con luôn luôn mạnh khỏe, mọi sự bình an, vạn sự tối lành, gia đình hòa thuận.\n\nNam mô A Di Đà Phật! (3 lần kèm 3 lạy)",
+      "notes": "Đàn trang dâng sao giải hạn có thể lập ngoài sân hoặc tại gia vào dịp Rằm tháng Giêng."
+    },
+    {
+      "id": "giai_han_sao_van_han",
+      "category_id": "dang_sao_giai_han",
+      "title_vi": "Văn Khấn Giải Hạn Sao Vân Hán (29 Hàng Tháng)",
+      "title_en": "Van Han Star Relief Prayer",
+      "suitable_tags": [
+        "dang_sao",
+        "van_han",
+        "giai_han",
+        "van_khan_nom"
+      ],
+      "significance": "Trích từ nguồn van_khan_nom.pdf: Vân Hán là tai tinh (sao xấu thuộc Hỏa) chủ về tai tiếng, ốm đau. Lễ cúng tiến hành ngày 29 hàng tháng, thắp 15 ngọn nến hướng về phương Nam.",
+      "offerings": "Hương, hoa, tiền vàng, phẩm oản, bài vị màu đỏ, mũ đỏ, 36 đồng tiền, 15 ngọn nến.",
+      "template": "Nam mô A Di Đà Phật! (3 lần kèm 3 lạy)\n\n- Nam mô Hiệu Thiên chí tôn Kim Quyết Ngọc Hoàng Thượng đế.\n- Con kính lạy Đức Trung Thiên tinh chúa Bắc cực Tử vi Tràng Sinh Đại đế.\n- Con kính lạy Đức Nam phương Bính Đinh Hỏa Đức Vân Hán Tinh quân.\n\nTín chủ con là: {ho_ten_tin_chu}.\nHôm nay là ngày 29 tháng {thang_am} năm {nam_am}, tín chủ con thành tâm sắm lễ hương hoa trà quả, thiết lập linh án để làm lễ giải hạn sao Vân Hán chiếu mệnh.\nCúi mong chư vị chấp kỳ lễ bạc phù hộ độ trì giải trừ vận hạn, ban phúc lộc thọ.\n\nNam mô A Di Đà Phật! (3 lần kèm 3 lạy)",
+      "notes": "Quay mặt về hướng chính Nam làm lễ giải hạn."
+    },
+    {
+      "id": "giai_han_sao_ke_do",
+      "category_id": "dang_sao_giai_han",
+      "title_vi": "Văn Khấn Giải Hạn Sao Kế Đô (18 Hàng Tháng)",
+      "title_en": "Ke Do Star Relief Prayer",
+      "suitable_tags": [
+        "dang_sao",
+        "ke_do",
+        "giai_han",
+        "van_khan_nom"
+      ],
+      "significance": "Trích từ nguồn van_khan_nom.pdf: Sao Kế Đô là hung tinh ám muội. Lễ cúng dâng sao Kế Đô tiến hành ngày 18 hàng tháng, thắp 21 ngọn nến hướng về chính Tây.",
+      "offerings": "Hương hoa, tiền vàng, phẩm oản, bài vị màu vàng, mũ màu vàng, 36 đồng tiền, 21 ngọn nến.",
+      "template": "Nam mô A Di Đà Phật! (3 lần kèm 3 lạy)\n\n- Nam mô Hiệu Thiên chí tôn Kim Quyết Ngọc Hoàng Thượng đế.\n- Con kính lạy Đức Địa cung thần Vỹ Kế Đô Tinh quân.\n- Con kính lạy Đức Thượng Thanh Bản Mệnh Nguyên Thần Chân quân.\n\nTín chủ con là: {ho_ten_tin_chu}.\nHôm nay là ngày 18 tháng {thang_am} năm {nam_am}, tín chủ con thành tâm sắm lễ thiết lập linh án để làm lễ giải hạn sao Kế Đô chiếu mệnh.\nCúi xin phù hộ toàn gia an khang thịnh vượng.\n\nNam mô A Di Đà Phật! (3 lần kèm 3 lạy)",
+      "notes": "Quay mặt về hướng chính Tây làm lễ giải hạn."
+    },
+    {
+      "id": "le_boi_hoan_dia_mach",
+      "category_id": "kinh_doanh_xay_dung",
+      "title_vi": "Văn Khấn Lễ Bồi Hoàn Địa Mạch",
+      "title_en": "Earth Meridian Restoration Prayer",
+      "suitable_tags": [
+        "dia_mach",
+        "dong_tho",
+        "long_mach",
+        "van_khan_nom"
+      ],
+      "significance": "Trích từ nguồn van_khan_nom.pdf: Khi gia đình đào đất lấp ao, khơi rãnh, xây tường không may làm tổn thương Long Mạch thì phải làm lễ bồi hoàn địa mạch để giải trừ tai hoạ, vận xui.",
+      "offerings": "Nước sông hòa đất linh nặn Thần Quy 5 màu chỉ ngũ sắc, hoa quả 5 màu đại diện Ngũ hành, hương hoa tiền vàng.",
+      "template": "Nam mô A Di Đà Phật! (3 lần kèm 3 lạy)\n\n- Con kính lạy Đức U Minh Giáo chủ Địa Tạng Vương Bồ Tát.\n- Con kính lạy Đức Hoàng Thiên Hậu Thổ chư vị Tôn thần.\n- Con kính lạy các Ngài Ngũ phương, Ngũ đế, Ngũ nhạc thánh đế, Nhị thập tứ khí phần quan, Địa mạch thần quan, Thanh Long Bạch Hổ.\n\nHôm nay là ngày {ngay_am} tháng {thang_am} năm {nam_am}.\nTín chủ con là: {ho_ten_tin_chu}.\nNgụ tại: {dia_chi_tin_chu}.\n\nDo công trình đào đất chạm tổn Long Mạch, nay xin sắm lễ bồi hoàn địa mạch, cầu xin các ngài xá tội, hàn gắn địa mạch, bảo hộ gia trạch an ninh.\n\nNam mô A Di Đà Phật! (3 lần kèm 3 lạy)",
+      "notes": "Nên chọn các ngày Thiên Xá, Thiên Nguyên, Cường Nhật để làm lễ."
+    },
+    {
+      "id": "le_tan_gia_nha_moi",
+      "category_id": "kinh_doanh_xay_dung",
+      "title_vi": "Văn Khấn Lễ Tân Gia (Ăn Mừng Nhà Mới)",
+      "title_en": "Housewarming Ceremony Prayer (Tan Gia)",
+      "suitable_tags": [
+        "tan_gia",
+        "nha_moi",
+        "nhap_trach",
+        "van_khan_nom"
+      ],
+      "significance": "Trích từ nguồn van_khan_nom.pdf: Sau lễ Nhập Trạch dọn về nhà mới, gia chủ tổ chức lễ Tân Gia mừng nhà mới tạ ơn Táo Quân, Thổ Thần, Gia Tiên và mời họ hàng xóm giềng chung vui.",
+      "offerings": "Hương hoa, vàng mã, trầu rượu và mâm cỗ mặn thịnh soạn cúng Táo quân, Thổ thần, Gia tiên.",
+      "template": "Nam mô A Di Đà Phật! (3 lần kèm 3 lạy)\n\nHôm nay là ngày {ngay_am} tháng {thang_am} năm {nam_am}.\nTín chủ con là: {ho_ten_tin_chu}.\nNgụ tại: {dia_chi_tin_chu}.\n\nNay bản gia hoàn tất công trình, chọn ngày lành gia đình nhóm lửa, nhân lễ khánh hạ ăn mừng nhà mới, kính cẩn tâu trình tạ ơn Đông Trù Tư Mệnh Táo Phủ Thần Quân và Gia Tiên.\nCầu xin gia đình an ninh khang thái, cửa rộng nhà cao, tài lộc dồi dào, vợ chồng hòa thuận, con cháu sum vầy.\n\nNam mô A Di Đà Phật! (3 lần kèm 3 lạy)",
+      "notes": "Nghi lễ tạo không khí vui tươi, gắn kết họ hàng làng xóm."
+    },
+    {
+      "id": "cung_thanh_su_ong_to_nghe",
+      "category_id": "gia_dinh",
+      "title_vi": "Văn Khấn Cúng Thánh Sư (Ông Tổ Nghề)",
+      "title_en": "Craft Guild Patron Saint Prayer (Thanh Su)",
+      "suitable_tags": [
+        "thanh_su",
+        "to_nghe",
+        "kinh_doanh",
+        "van_khan_nom"
+      ],
+      "significance": "Trích từ nguồn van_khan_nom.pdf: Thánh Sư (Tiên Sư / Nghệ Sư) là vị tổ nghề khai phá truyền dạy nghề nghiệp. Cúng Thánh Sư dịp Tết, Sóc Vọng hay ngày Kỵ Nhật tổ nghề để tạ ơn và cầu mua may bán đắt, công việc hanh thông.",
+      "offerings": "Mâm lễ mặn/chay, trầu cau, rượu hoa, đèn nến dâng cúng tại miếu phường hoặc bàn thờ Thánh Sư tại gia.",
+      "template": "Nam mô A Di Đà Phật! (3 lần kèm 3 lạy)\n\n- Con lạy chín phương Trời, mười phương Chư Phật, Chư Phật mười phương.\n- Kính lạy Hoàng Thiên Hậu Thổ chư vị Tôn thần.\n- Con kính lạy ngài Thánh Sư nghề {ten_nghe_nghiep}.\n\nHôm nay là ngày {ngay_am} tháng {thang_am} năm {nam_am}.\nTín chủ con là: {ho_ten_tin_chu}, hành nghề {ten_nghe_nghiep}.\nNgụ tại: {dia_chi_tin_chu}.\n\nThành tâm sắm sửa lễ vật dâng lên trước án kính mời Đức Thánh Sư giáng lâm chứng giám, phù hộ cho công việc hanh thông, lộc tài tăng tiến, xua tan khó khăn trở ngại.\n\nNam mô A Di Đà Phật! (3 lần kèm 3 lạy)",
+      "notes": "Những người làm nghề thủ công, buôn bán rất trọng lễ cúng Thánh Sư."
+    },
+    {
+      "id": "van_khan_duc_thanh_hien",
+      "category_id": "chua_den",
+      "title_vi": "Văn Khấn Đức Thánh Hiền (Tại Chùa)",
+      "title_en": "Prayer to Saint Ananda at Buddhist Temple",
+      "suitable_tags": [
+        "chua",
+        "thanh_hien",
+        "a_nan_da",
+        "van_khan_nom"
+      ],
+      "significance": "Trích từ nguồn van_khan_nom.pdf: Đức Thánh Hiền (Đại Thánh Khải Giáo A Nan Đà Tôn Giả) là vị chứng giám gia hộ Phật pháp và che chở gia đạo khi đi lễ chùa.",
+      "offerings": "Hoa tươi, quả ngọt, phẩm oản chay, nước trong, hương trầm.",
+      "template": "Nam mô A Di Đà Phật! (3 lần kèm 3 lạy)\n\n- Con lạy chín phương Trời, mười phương Chư Phật, Chư Phật mười phương.\n- Con cúi lạy Đức Thánh Hiền, Đại Thánh Khải Giáo A Nan Đà Tôn Giả.\n\nHôm nay là ngày {ngay_am} tháng {thang_am} năm {nam_am}.\nTín chủ con là: {ho_ten_tin_chu}.\nCúi mong Ngài soi xét tâm thành, phù hộ cho gia đình chúng con được sở cầu như ý, sở nguyện tòng tâm, vạn sự bình an.\n\nNam mô A Di Đà Phật! (3 lần kèm 3 lạy)",
+      "notes": "Thắp hương tại ban Đức Thánh Hiền sau khi khấn Tam Bảo."
+    },
+    {
+      "id": "van_khan_den_ba_chua_kho",
+      "category_id": "chua_den",
+      "title_vi": "Văn Khấn Tại Đền Bà Chúa Kho",
+      "title_en": "Prayer at Ba Chua Kho Temple",
+      "suitable_tags": [
+        "den_mieu",
+        "chua_kho",
+        "tai_loc",
+        "van_khan_nom"
+      ],
+      "significance": "Trích từ nguồn van_khan_nom.pdf: Bà Chúa Kho hiển hóa anh linh quản lý kho tàng quốc gia. Người dân đến lễ cầu tài đắc tài, cầu lộc đắc lộc, vay vốn làm ăn hanh thông.",
+      "offerings": "Sắm sửa kim ngân, hương hoa, lễ vật, xôi gà hoặc phẩm oản dâng trước đền.",
+      "template": "Nam mô A Di Đà Phật! (3 lần kèm 3 lạy)\n\n- Con xin kính lạy Tam phủ công đồng, Tứ phủ vạn linh.\n- Con xin kính lạy Thiên tiên Thánh mẫu, Địa thiên Thánh mẫu, Thủy tiên Thánh mẫu.\n- Con xin kính lạy Đức Chúa Kho Thánh mẫu hiển hóa anh linh.\n\nHương tử con là: {ho_ten_tin_chu}.\nNgụ tại: {dia_chi_tin_chu}.\nHôm nay là ngày {ngay_am} tháng {thang_am} năm {nam_am}.\nCon sắm sửa lễ vật chí thiết thành tâm dâng lễ, sám hối cầu xin phù hộ gia quyến bình an, cầu tài đắc tài, cầu lộc đắc lộc, bách sự như ý.\n\nNam mô A Di Đà Phật! (3 lần kèm 3 lạy)",
+      "notes": "Giữ tâm thành kính rộng mở, hứa nguyện làm ăn chân chính."
+    },
+    {
+      "id": "van_khan_duc_thanh_tran",
+      "category_id": "chua_den",
+      "title_vi": "Văn Khấn Đức Thánh Trần (Hưng Đạo Đại Vương)",
+      "title_en": "Prayer to Prince Tran Hung Dao",
+      "suitable_tags": [
+        "den_mieu",
+        "thanh_tran",
+        "hung_dao_vuong",
+        "van_khan_nom"
+      ],
+      "significance": "Trích từ nguồn van_khan_nom.pdf: Đức Thánh Trần (Quốc Công tiết chế Hưng Đạo Đại Vương) uy linh trác vĩ, trừ tà diệt ma, phù hộ quốc thái dân an, trừ tai giải ách.",
+      "offerings": "Hương hoa, trầu cau, mâm lễ mặn hoặc đĩa xôi gà luộc, rượu trắng, tiền vàng.",
+      "template": "Nam mô A Di Đà Phật! (3 lần kèm 3 lạy)\n\n- Con kính lạy Tứ phủ Công Đồng Trần Triều.\n- Con kính lạy Đức Trần Triều hiển thánh Nhân Vũ Hưng Đạo Đại Vương Đại Nguyên Soái.\n\nHương tử con là: {ho_ten_tin_chu}.\nNgụ tại: {dia_chi_tin_chu}.\nHôm nay ngày {ngay_am} tháng {thang_am} năm {nam_am}.\nThành tâm bái xin các vị phù hộ độ trì cho gia quyến khỏe mạnh, trừ tai qua nạn khỏi, cầu tài đắc tài, cầu lộc đắc lộc, cầu bình an đắc bình an.\n\nNam mô A Di Đà Phật! (3 lần kèm 3 lạy)",
+      "notes": "Kính cẩn trước án Đức Thánh Trần Hưng Đạo."
+    },
+    {
+      "id": "van_khan_ban_cong_dong",
+      "category_id": "chua_den",
+      "title_vi": "Văn Khấn Ban Công Đồng / Tam Tòa Thánh Mẫu",
+      "title_en": "Prayer to Holy Mothers & Cong Dong Altars",
+      "suitable_tags": [
+        "den_mieu",
+        "cong_dong",
+        "thanh_mau",
+        "van_khan_nom"
+      ],
+      "significance": "Trích từ nguồn van_khan_nom.pdf: Khấn Tam Tòa Thánh Mẫu và Tứ Phủ Công Đồng tại Đền, Miếu, Phủ để cầu bình an, may mắn, mát mẻ gia đạo.",
+      "offerings": "Hương hoa, nến, quả tươi, đồ lễ Sơn Trang (15 con ốc, cua, quả), trầu cau.",
+      "template": "Nam mô A Di Đà Phật! (3 lần kèm 3 lạy)\n\n- Con lạy đức Vua cha Ngọc Hoàng Thượng đế.\n- Con lạy Tam Tòa Thánh Mẫu, Tam phủ Công Đồng, Tứ phủ Vạn linh.\n- Con kính lạy Đức Thiên tiên Quỳnh Hoa Liễu Hạnh Mã Hoàng Công chúa.\n\nHương tử con là: {ho_ten_tin_chu}.\nNgụ tại: {dia_chi_tin_chu}.\nHôm nay ngày {ngay_am} tháng {thang_am} năm {nam_am}.\nKính dâng lễ vật cúi xin các Ngài xót thương phù hộ cho gia chung sức khỏe dồi dào, phúc thọ khang ninh, vạn sự hanh thông.\n\nNam mô A Di Đà Phật! (3 lần kèm 3 lạy)",
+      "notes": "Tuân thủ trình tự dâng lễ từ ban thờ chính ra ban thờ ngoài."
+    }
+  ]
+}
