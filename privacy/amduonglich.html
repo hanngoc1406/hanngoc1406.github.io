@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chính Sách Quyền Riêng Tư - Lịch Âm Dương</title>
+  <title>Chính Sách Quyền Riêng Tư - Âm Dương Lịch</title>
+  <link rel="icon" type="image/png" href="../assets/app_icon.png">
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -29,6 +30,21 @@
       text-decoration: none;
       font-weight: 600;
       font-size: 13px;
+    }
+    .app-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .app-brand-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(192, 57, 43, 0.15);
+      border: 1px solid #EADBC8;
+      flex-shrink: 0;
     }
     h1 {
       color: #C0392B;
@@ -61,7 +77,13 @@
       border-radius: 12px;
       font-size: 12px;
       font-weight: bold;
-      margin-bottom: 10px;
+    }
+    .highlight-box {
+      background-color: #FDF2E9;
+      border-left: 4px solid #C0392B;
+      padding: 16px 18px;
+      border-radius: 8px;
+      margin: 16px 0;
     }
     .footer {
       margin-top: 30px;
@@ -77,48 +99,71 @@
 
   <div class="container">
     <a href="../index.html" class="back-btn">← Quay lại danh sách ứng dụng</a><br>
-    <span class="badge">ỨNG DỤNG: LỊCH ÂM DƯƠNG</span>
+    <div class="app-brand">
+      <img src="../assets/app_icon.png" alt="Âm Dương Lịch" class="app-brand-icon">
+      <span class="badge">ỨNG DỤNG: ÂM DƯƠNG LỊCH (v1.3.0)</span>
+    </div>
     <h1>Chính Sách Quyền Riêng Tư (Privacy Policy)</h1>
-    <p><em>Cập nhật lần cuối: Tháng 9, 2026</em></p>
+    <p><em>Cập nhật lần cuối: Tháng 10, 2026</em></p>
 
-    <p>Chính sách quyền riêng tư này mô tả cách ứng dụng <strong>Lịch Âm Dương</strong> ("chúng tôi", "ứng dụng") thu thập, sử dụng và bảo vệ thông tin của bạn khi sử dụng ứng dụng di động trên nền tảng Android.</p>
+    <p>Chính sách quyền riêng tư này mô tả cách ứng dụng <strong>Âm Dương Lịch</strong> (Package ID: <code>amduonglich.id.vn.ducpa</code> — "chúng tôi", "ứng dụng") thu thập, sử dụng, mã hóa và bảo vệ thông tin của bạn khi sử dụng ứng dụng di động trên nền tảng Android.</p>
 
-    <h2>1. Thu Thập Dữ Liệu Cá Nhân</h2>
-    <p>Chúng tôi tôn trọng tối đa quyền riêng tư của bạn:</p>
+    <h2>1. Thu Thập &amp; Lưu Trữ Dữ Liệu (Offline-First &amp; Sao Lưu Đám Mây Tùy Chọn)</h2>
+    <p>Chúng tôi tôn trọng tối đa quyền riêng tư của bạn và cung cấp 2 chế độ sử dụng minh bạch:</p>
     <ul>
-      <li><strong>Không yêu cầu tạo tài khoản:</strong> Bạn không cần đăng ký, đăng nhập hay cung cấp họ tên, email, số điện thoại để sử dụng ứng dụng.</li>
-      <li><strong>Dữ liệu lịch & sự kiện lưu cục bộ (Offline-first):</strong> Mọi dữ liệu về sự kiện cá nhân, ngày giỗ gia đình, ghi chú và tùy chọn cài đặt của bạn được lưu trữ 100% trên bộ nhớ cục bộ (SQLite Database) của thiết bị. Chúng tôi <strong>không bao giờ</strong> gửi hoặc lưu trữ các dữ liệu này lên bất kỳ máy chủ bên ngoài nào.</li>
+      <li><strong>Chế độ Mặc định (Không bắt buộc tạo tài khoản — Offline 100%):</strong> Bạn có thể sử dụng toàn bộ các tính năng cốt lõi của ứng dụng (xem Âm Dương Lịch, Can Chi, 24 Tiết Khí, Giờ Hoàng Đạo, Sao Chiếu Mệnh, Văn Khấn Nôm, Đổi Lịch Tra Mệnh và quản lý Ngày Giỗ gia đình) mà <strong>không cần đăng nhập</strong>. Ở chế độ này, mọi dữ liệu sự kiện và ngày giỗ được lưu trữ 100% trên cơ sở dữ liệu cục bộ (SQLite) trong điện thoại của bạn.</li>
+      <li><strong>Chế độ Tài khoản &amp; Sao lưu Đám mây (Tùy chọn qua Google Sign-In):</strong> Khi bạn chủ động chọn <em>"Đăng nhập 1 chạm với Google"</em> trong mục <strong>Cài đặt &gt; Tài khoản</strong> để cá nhân hóa trang Lịch và sao lưu dữ liệu phòng khi đổi điện thoại:
+        <ul>
+          <li><strong>Dữ liệu thu thập:</strong> Mã định danh tài khoản (<code>Firebase UID</code>), địa chỉ Email Google (chỉ dùng để hiển thị tài khoản đang liên kết), cùng thông tin Tài khoản ứng dụng do bạn tự nhập (Tên hiển thị, Giới tính, Ngày/Tháng/Năm sinh để tính Sao Chiếu Mệnh &amp; Vận Hạn) và danh sách Ngày giỗ / Sự kiện cá nhân.</li>
+          <li><strong>Cơ chế mã hóa bảo mật (Client-side Encryption):</strong> Trước khi gửi lên đám mây, toàn bộ gói dữ liệu sao lưu của bạn được <strong>mã hóa ngay trên thiết bị kèm chữ ký xác thực toàn vẹn <code>HMAC-SHA256</code></strong> và truyền qua giao thức bảo mật HTTPS/TLS lên cơ sở dữ liệu <strong>Google Cloud Firestore</strong>.</li>
+          <li><strong>Cô lập dữ liệu tuyệt đối:</strong> Dữ liệu đám mây được khóa chặt theo đúng định danh <code>UID</code> của riêng bạn và được bảo vệ chống truy cập trái phép bởi <strong>Firebase App Check (Google Play Integrity)</strong>. Chúng tôi tuyệt đối không bán, không cho thuê và không chia sẻ dữ liệu cá nhân của bạn cho bất kỳ bên thứ ba nào.</li>
+        </ul>
+      </li>
     </ul>
 
-    <h2>2. Quyền Truy Cập Thiết Bị (Device Permissions)</h2>
-    <p>Ứng dụng chỉ yêu cầu các quyền kỹ thuật tối thiểu cần thiết để vận hành:</p>
+    <h2 id="delete-account">2. Hướng Dẫn Xóa Tài Khoản &amp; Dữ Liệu Đám Mây (Account &amp; Data Deletion)</h2>
+    <div class="highlight-box">
+      <p><strong>Quyền xóa dữ liệu toàn phần (Google Play Data Safety Compliance):</strong> Bạn có toàn quyền xóa vĩnh viễn Tài khoản và toàn bộ bản sao lưu Đám mây bất kỳ lúc nào theo 1 trong 2 cách sau:</p>
+      <ul>
+        <li><strong>Cách 1 — Xóa trực tiếp ngay trong ứng dụng (Xử lý tức thì &amp; Tự động 100%):</strong><br>
+          Mở ứng dụng <strong>Âm Dương Lịch</strong> ➔ Vào tab <strong>Cài đặt (Settings)</strong> ➔ Mục <strong>Tài khoản (Account)</strong> ➔ Nhấn <strong>"Xóa tài khoản &amp; dữ liệu đám mây" (Delete account &amp; cloud data)</strong> ➔ Xác nhận <strong>"Xóa vĩnh viễn"</strong>.<br>
+          Ngay lập tức, toàn bộ bản sao lưu trên Google Cloud Firestore và liên kết xác thực Firebase Authentication (<code>UID</code>, Email, Thông tin Tài khoản, Ngày giỗ sao lưu) sẽ bị xóa vĩnh viễn và không thể khôi phục.</li>
+        <li><strong>Cách 2 — Yêu cầu xóa qua Web / Email (Dành cho người dùng đã gỡ cài đặt ứng dụng):</strong><br>
+          Nếu bạn đã gỡ ứng dụng khỏi thiết bị và muốn xóa dữ liệu sao lưu đám mây từ xa, vui lòng sử dụng chính địa chỉ Gmail đã liên kết gửi email về hộp thư hỗ trợ: <a href="mailto:ducpa@ducpa.id.vn?subject=Yeu%20cau%20xoa%20tai%20khoan%20Am%20Duong%20Lich"><strong>ducphan397@gmail.com</strong></a> với tiêu đề <em>"Yêu cầu xóa dữ liệu tài khoản Âm Dương Lịch"</em>. Chúng tôi sẽ xóa vĩnh viễn toàn bộ dữ liệu gắn với tài khoản của bạn trên hệ thống Firebase trong vòng tối đa <strong>7 ngày làm việc</strong>.</li>
+      </ul>
+    </div>
+
+    <h2>3. Quyền Truy Cập Thiết Bị (Device Permissions)</h2>
+    <p>Ứng dụng chỉ yêu cầu các quyền kỹ thuật tối thiểu phục vụ trực tiếp cho tính năng người dùng:</p>
     <ul>
-      <li><strong>Quyền Thông Báo (POST_NOTIFICATIONS):</strong> Để gửi thông báo nhắc nhở khi đến ngày giỗ gia đình hoặc sự kiện quan trọng do bạn đã đặt lịch.</li>
-      <li><strong>Quyền Khởi Động (RECEIVE_BOOT_COMPLETED & SCHEDULE_EXACT_ALARM):</strong> Đảm bảo hệ thống tự động thiết lập lại các thông báo nhắc nhở ngày giỗ sau khi bạn khởi động lại điện thoại.</li>
-      <li><strong>Quyền Truy Cập Mạng (INTERNET / ACCESS_NETWORK_STATE):</strong> Dành riêng cho việc tải và hiển thị quảng cáo từ dịch vụ Google AdMob.</li>
+      <li><strong>Quyền Thông Báo (<code>POST_NOTIFICATIONS</code>):</strong> Để gửi lời nhắc trước ngày giỗ gia đình, sự kiện cá nhân, kỳ nghỉ lễ và ngày Rằm (15) / Mùng Một hàng tháng.</li>
+      <li><strong>Quyền Khởi Động &amp; Báo Thức Chính Xác (<code>RECEIVE_BOOT_COMPLETED</code>, <code>SCHEDULE_EXACT_ALARM</code>):</strong> Đảm bảo hệ thống tự động khôi phục lịch nhắc ngày giỗ chuẩn xác sau khi bạn khởi động lại điện thoại.</li>
+      <li><strong>Quyền Đồng Bộ Lịch Hệ Thống (<code>READ_CALENDAR</code> / <code>WRITE_CALENDAR</code> — Tùy chọn):</strong> Chỉ được yêu cầu khi bạn chủ động bấm tính năng nhập hoặc xuất sự kiện với Lịch có sẵn trên máy.</li>
+      <li><strong>Quyền Truy Cập Mạng (<code>INTERNET</code> / <code>ACCESS_NETWORK_STATE</code>):</strong> Phục vụ việc đồng bộ Sao lưu Đám mây (khi bạn đăng nhập), cập nhật dữ liệu lịch nghỉ lễ và hiển thị quảng cáo Google AdMob.</li>
     </ul>
 
-    <h2>3. Dịch Vụ Của Bên Thứ Ba (Google AdMob)</h2>
-    <p>Ứng dụng sử dụng dịch vụ quảng cáo của <strong>Google AdMob</strong> để duy trì và phát triển ứng dụng miễn phí. Google AdMob có thể tự động thu thập một số thông tin kỹ thuật không định danh cá nhân theo chính sách của Google, bao gồm:</p>
+    <h2>4. Dịch Vụ Của Bên Thứ Ba (Google Play Services, Firebase &amp; AdMob)</h2>
+    <p>Ứng dụng tích hợp các dịch vụ hạ tầng chính thống của Google:</p>
     <ul>
-      <li>Mã nhận dạng quảng cáo của thiết bị (Google Advertising ID - GAID).</li>
-      <li>Địa chỉ IP (được ẩn danh/rút gọn).</li>
-      <li>Thông tin chẩn đoán lỗi và hiệu suất tải quảng cáo.</li>
+      <li><strong>Google Firebase (Authentication, Cloud Firestore, App Check, Crashlytics, Analytics):</strong> Cung cấp hạ tầng xác thực OAuth 2.0 với Google, lưu trữ bản sao lưu mã hóa, kiểm tra tính toàn vẹn của ứng dụng (Play Integrity) và thu thập báo cáo lỗi kỹ thuật ẩn danh (Crash Stacktrace) nhằm khắc phục sự cố kịp thời.</li>
+      <li><strong>Google AdMob:</strong> Hiển thị quảng cáo để duy trì ứng dụng miễn phí. Google AdMob có thể sử dụng Mã nhận dạng quảng cáo của thiết bị (Google Advertising ID - GAID) và thông tin hiệu suất hiển thị quảng cáo. Khi bạn nâng cấp hoặc kích hoạt chế độ <strong>VIP Không Quảng Cáo</strong>, toàn bộ quảng cáo sẽ được tắt hoàn toàn.</li>
+      <li><strong>Google Play Billing:</strong> Xử lý giao dịch mua hoặc khôi phục gói VIP Không Quảng Cáo an toàn qua tài khoản Google Play của bạn.</li>
     </ul>
-    <p>Để tìm hiểu chi tiết cách Google xử lý dữ liệu quảng cáo, bạn có thể tham khảo: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Chính sách quyền riêng tư của Google</a>.</p>
+    <p>Để tìm hiểu chi tiết cách Google bảo vệ dữ liệu, bạn có thể tham khảo tại: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Chính sách quyền riêng tư của Google</a>.</p>
 
-    <h2>4. Quyền Kiểm Soát Của Người Dùng</h2>
+    <h2>5. Quyền Kiểm Soát Của Người Dùng</h2>
     <ul>
-      <li>Bạn có thể bật/tắt quyền thông báo bất kỳ lúc nào trong phần Cài đặt của hệ điều hành Android.</li>
-      <li>Bạn có thể tắt quảng cáo trong ứng dụng bằng cách xem video nhận thưởng hoặc nâng cấp Gói VIP không quảng cáo trong mục Cài Đặt.</li>
-      <li>Bạn có thể xóa toàn bộ dữ liệu sự kiện/ngày giỗ bất cứ lúc nào bằng cách xóa ứng dụng hoặc xóa dữ liệu ứng dụng trong phần Cài đặt thiết bị.</li>
+      <li>Bạn có thể sử dụng ứng dụng trọn đời mà không cần đăng nhập tài khoản.</li>
+      <li>Bạn có thể bật/tắt từng nhóm thông báo (Ngày giỗ, Ngày lễ, Rằm &amp; Mùng Một) ngay trong phần Cài đặt của ứng dụng.</li>
+      <li>Bạn có thể tắt hoàn toàn quảng cáo bằng cách xem video nhận thưởng hoặc nâng cấp gói VIP Không Quảng Cáo.</li>
+      <li>Bạn có thể xuất/nhập dữ liệu thủ công (file JSON) hoặc xóa vĩnh viễn dữ liệu đám mây bất cứ lúc nào.</li>
     </ul>
 
-    <h2>5. Trẻ Em</h2>
-    <p>Ứng dụng không thu thập bất kỳ thông tin nhận dạng cá nhân nào từ trẻ em dưới 13 tuổi.</p>
+    <h2>6. Trẻ Em</h2>
+    <p>Ứng dụng mang tính chất tra cứu lịch pháp và văn hóa truyền thống gia đình, không hướng tới việc thu thập thông tin nhận dạng cá nhân từ trẻ em dưới 13 tuổi.</p>
 
-    <h2>6. Liên Hệ Với Chúng Tôi</h2>
-    <p>Nếu bạn có bất kỳ câu hỏi hoặc góp ý nào về Chính sách quyền riêng tư này, vui lòng liên hệ với nhà phát triển qua email hỗ trợ của ứng dụng.</p>
+    <h2>7. Liên Hệ Với Chúng Tôi</h2>
+    <p>Nếu bạn có bất kỳ câu hỏi, góp ý hoặc yêu cầu hỗ trợ nào liên quan đến quyền riêng tư và dữ liệu tài khoản, vui lòng liên hệ với nhà phát triển qua email: <a href="mailto:ducpa@ducpa.id.vn"><strong>ducpa@ducpa.id.vn</strong></a>.</p>
 
     <div class="footer">
       © 2026 ducpa. Bảo lưu mọi quyền.

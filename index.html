@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ứng Dụng Di Động & Tiện Ích</title>
+  <link rel="icon" type="image/png" href="assets/app_icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -93,6 +94,10 @@
       align-items: center;
       justify-content: center;
       font-size: 28px;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(192, 57, 43, 0.15);
+      border: 1px solid rgba(192, 57, 43, 0.15);
+      flex-shrink: 0;
     }
     .app-title {
       font-size: 18px;
@@ -145,22 +150,23 @@
     </header>
 
     <div class="app-grid">
-      <!-- APP 1: Lịch Âm Dương -->
+      <!-- APP 1: Âm Dương Lịch -->
       <div class="app-card">
         <div>
           <div class="app-header">
-            <div class="app-icon">📅</div>
+            <img src="assets/app_icon.png" alt="Âm Dương Lịch" class="app-icon">
             <div>
-              <div class="app-title">Lịch Âm Dương</div>
-              <div class="app-category">Tiện Ích / Lịch Vạn Niên</div>
+              <div class="app-title">Âm Dương Lịch (v1.3.0)</div>
+              <div class="app-category">Tiện Ích / Lịch Vạn Niên &amp; Văn Hóa Việt</div>
             </div>
           </div>
           <p class="app-desc">
-            Xem lịch âm dương song hành, Can Chi, Tiết Khí, Giờ Hoàng Đạo và quản lý ngày giỗ gia đình với cơ chế lưu trữ ngoại tuyến an toàn 100%.
+            Xem Âm Dương Lịch song hành, Can Chi, 24 Tiết Khí, Giờ Hoàng Đạo; tra cứu Sao Chiếu Mệnh (Cửu Diệu), Vận Hạn Năm, Đổi Lịch Tra Mệnh và Kho Văn Khấn Nôm Cổ Truyền. Quản lý Ngày Giỗ gia đình hoạt động ngoại tuyến (Offline-first) kèm tùy chọn Đăng nhập Google &amp; Sao lưu Đám mây mã hóa an toàn.
           </p>
         </div>
         <div class="app-actions">
           <a href="privacy/amduonglich.html" class="app-link">Chính Sách Quyền Riêng Tư ➔</a>
+          <a href="privacy/amduonglich.html#delete-account" class="app-link">Yêu Cầu Xóa Tài Khoản ➔</a>
         </div>
       </div>
 
