@@ -45,10 +45,10 @@ footer { text-align: center; margin-top: 40px; padding-top: 24px; border-top: 1p
 <span class="badge">Keepcode</span>
 </div>
 <h1>Chính sách quyền riêng tư</h1>
-<p class="effective">Ngày hiệu lực: 6 tháng 11 năm 2026</p>
+<p class="effective">Ngày hiệu lực: 8 tháng 11 năm 2026</p>
 <section>
 <h2>1. Tóm tắt</h2>
-<p>Keepcode do Phan Đức phát hành. Ứng dụng không có tài khoản, không có máy chủ riêng và không dùng công cụ phân tích. Những gì bạn tạo nằm trên máy của bạn. Bên thứ ba duy nhất liên quan là Google AdMob khi bạn chọn xem video thưởng, và Google Play hoặc App Store khi bạn mua hoặc khôi phục Pro.</p>
+<p>Keepcode do Phan Đức phát hành. Ứng dụng không có tài khoản, không có máy chủ riêng và không dùng công cụ phân tích. Những gì bạn tạo nằm trên máy của bạn. Bên thứ ba duy nhất liên quan là Google AdMob khi bạn chọn xem video thưởng, Firebase Crashlytics khi ứng dụng bị dừng đột ngột hoặc gặp lỗi không mong muốn, và Google Play hoặc App Store khi bạn mua hoặc khôi phục Pro.</p>
 </section>
 <section>
 <h2>2. Dữ liệu lưu trên máy</h2>
@@ -68,30 +68,36 @@ footer { text-align: center; margin-top: 40px; padding-top: 24px; border-top: 1p
 <p>Bạn có thể đặt lại hoặc giới hạn mã định danh quảng cáo trong cài đặt của thiết bị.</p>
 </section>
 <section>
-<h2>5. Mua hàng</h2>
+<h2>5. Báo cáo lỗi (Firebase Crashlytics)</h2>
+<p>Khi ứng dụng bị dừng đột ngột hoặc gặp lỗi không mong muốn, ứng dụng gửi một báo cáo lỗi tới Firebase Crashlytics, một dịch vụ của Google, để chúng tôi tìm và sửa lỗi.</p>
+<p>Báo cáo chứa thông tin kỹ thuật như lỗi và dấu vết ngăn xếp (stack trace), mẫu thiết bị, phiên bản hệ điều hành, phiên bản ứng dụng và một mã cài đặt ngẫu nhiên. Báo cáo không chứa mã QR, logo hay nội dung nào khác của bạn.</p>
+<p>Google giữ báo cáo lỗi tối đa 90 ngày: <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></p>
+</section>
+<section>
+<h2>6. Mua hàng</h2>
 <p>Mua và khôi phục Pro do Google Play hoặc App Store xử lý. Chúng tôi không bao giờ nhận thông tin thẻ hay thanh toán của bạn. Ứng dụng chỉ nhận xác nhận từ Store rằng Pro đã được mua để mở Pro.</p>
 </section>
 <section>
-<h2>6. Chia sẻ, lưu giữ và bảo mật</h2>
+<h2>7. Chia sẻ, lưu giữ và bảo mật</h2>
 <p>Chúng tôi không bán dữ liệu của bạn và không chia sẻ với ai ngoài các dịch vụ nêu trên.</p>
-<p>Chúng tôi không giữ bản sao dữ liệu của bạn trên máy chủ nào. Dữ liệu trên máy còn cho tới khi bạn xóa hoặc gỡ ứng dụng, như nêu ở mục 2. Google, Google Play và App Store giữ dữ liệu họ thu thập theo chính sách của họ.</p>
-<p>Trạng thái Pro được giữ trong bộ nhớ bảo mật của máy. Các dịch vụ của Google và Store mà ứng dụng dùng gửi dữ liệu qua kết nối được mã hóa.</p>
+<p>Chúng tôi không giữ bản sao dữ liệu của bạn trên máy chủ nào. Ngoại lệ duy nhất là báo cáo lỗi, được Firebase Crashlytics lưu tối đa 90 ngày như nêu ở mục 5. Dữ liệu trên máy còn cho tới khi bạn xóa hoặc gỡ ứng dụng, như nêu ở mục 2. Google, Google Play và App Store giữ dữ liệu họ thu thập theo chính sách của họ.</p>
+<p>Trạng thái Pro được giữ trong bộ nhớ bảo mật của máy. Các dịch vụ của Google và Store mà ứng dụng dùng, kể cả Firebase Crashlytics, gửi dữ liệu qua kết nối được mã hóa.</p>
 </section>
 <section>
-<h2>7. Quyền của bạn</h2>
-<p>Vì nội dung của bạn nằm trên máy, bạn có thể xem, sửa hoặc xóa trực tiếp trong ứng dụng. Với dữ liệu Google thu thập cho quảng cáo, hãy dùng cài đặt quảng cáo trên thiết bị và các công cụ nêu trong chính sách quyền riêng tư của Google.</p>
+<h2>8. Quyền của bạn</h2>
+<p>Vì nội dung của bạn nằm trên máy, bạn có thể xem, sửa hoặc xóa trực tiếp trong ứng dụng. Với dữ liệu Google thu thập cho quảng cáo, hãy dùng cài đặt quảng cáo trên thiết bị và các công cụ nêu trong chính sách quyền riêng tư của Google. Không thể tắt báo cáo lỗi trong ứng dụng, nhưng bạn có thể gửi email để yêu cầu chúng tôi xóa các báo cáo lỗi gắn với lượt cài đặt của bạn.</p>
 <p>Bạn có thể gửi email cho chúng tôi về mọi yêu cầu liên quan tới dữ liệu cá nhân, kể cả yêu cầu theo pháp luật Việt Nam về bảo vệ dữ liệu cá nhân hoặc theo GDPR. Chúng tôi sẽ phản hồi trong thời gian hợp lý.</p>
 </section>
 <section>
-<h2>8. Trẻ em</h2>
+<h2>9. Trẻ em</h2>
 <p>Ứng dụng dành cho mọi người và không nhắm tới trẻ em dưới 13 tuổi. Chúng tôi không cố ý thu thập dữ liệu cá nhân của trẻ em.</p>
 </section>
 <section>
-<h2>9. Thay đổi chính sách</h2>
+<h2>10. Thay đổi chính sách</h2>
 <p>Chúng tôi có thể cập nhật chính sách khi ứng dụng thay đổi. Ngày hiệu lực ở đầu trang cho biết phiên bản mới nhất.</p>
 </section>
 <section>
-<h2>10. Liên hệ</h2>
+<h2>11. Liên hệ</h2>
 <p>Câu hỏi về quyền riêng tư: <a href="mailto:ducphan397@gmail.com">ducphan397@gmail.com</a></p>
 </section>
 <p class="related">
